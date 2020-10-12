@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FantasyScout</string>
+    <string name="title_home">Home</string>
+    <string name="title_analysts">Analysts</string>
+    <string name="title_search">Search</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_login">Login</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_contactUs">Contact Us</string>
+
+</resources>
