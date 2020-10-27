@@ -1,11 +1,11 @@
 <?php
    // Initialize connection variables
    $server = "localhost";
-   $user = "id15075449_fsmod";
-   $pass = "FSpasswordcsc4111^";
-   $db = "id15075449_fsdb";
+   $user = "root";
+   $pass = "";
+   $db = "fsdb";
 
-   //create connection 
+   //create connection
    $con = mysqli_connect($server,$user,$pass,$db);
    // Check connection
    if (mysqli_connect_errno())
@@ -14,7 +14,7 @@
       echo '<br>Username:' . $user;
       echo '<br>Password: ' . $pass;
       echo '<br>Database: ' . $db . '<br>';
-      die("Failed to connect to MySQL: " . mysqli_connect_error()); 
+      die("Failed to connect to MySQL: " . mysqli_connect_error());
    }
    echo "Connected Successfully";
 
