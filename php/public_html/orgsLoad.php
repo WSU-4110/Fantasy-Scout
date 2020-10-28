@@ -7,58 +7,46 @@ require 'init.php';
 
 // ***MAKE SQL QUERY STRINGS***
 // Make query to load ESPN org stats
-$loadESPN = '
-INSERT INTO Organizations (name, website)
-VALUES ("ESPN","https://www.espn.com/fantasy/football/");';
-
-// Make query to Load Fantasy Footballers org stats
-$loadFF = '
-INSERT INTO Organizations (name, website)
-VALUES ("Fantasy Footballers","https://www.thefantasyfootballers.com/");';
-
-// Make query to load NFL org stats
-$loadNFL = '
-INSERT INTO Organizations (name, website)
-VALUES ("NFL","https://fantasy.nfl.com/");';
-
-// Make query to load Yahoo Sports org stats
-$loadYahoo = '
-INSERT INTO Organizations (name, website)
-VALUES ("Yahoo Sports","https://sports.yahoo.com/");';
+$orgs = array(
+  array("ESPN", "https://www.espn.com/fantasy/football/"),
+  array("Fantasy Footballers", "https://www.thefantasyfootballers.com/"),
+  array("NFL", "https://fantasy.nfl.com/"),
+  array("Yahoo Sports", "https://sports.yahoo.com/")
+);
 
 
 
-// ***EXECUTE SQL QUERIES
-// Execute ESPN load query
-if (mysqli_query($con, $loadESPN)) {
-  echo "ESPN Table loaded successfully<br><br>";
-} else {
-  echo "ESPN Table load FAILURE!:<br>" . mysqli_error() . "<br><br>";
+// ***EXECUTE SQL QUERIES***
+
+for ($i=0; $i < sizeof($orgs); $i++) {
+  $name = $orgs[$i][0];
+  $website = $orgs[$i][1];
+  // NOTE: CHECK NOT WORKING!
+  /*$check = "
+
+  ";
+  if (!mysqli_query($con, $check)) {*/
+  // Organization record does not exist in database, add it
+    $load = "
+      INSERT INTO organizations (name, website)
+      VALUES ('$name', '$website');
+    ";
+    if (mysqli_query($con, $load)) {
+      echo "Organization $name loaded successfully<br><br>";
+    } else {
+      echo "ORganization $name load FAILURE!:<br>" . mysqli_error($con) . "<br><br>";
+    }
+  }
+  /*else {
+    // Organization record already exists
+    echo "Organization $name: $website already exists in database.<br><br>";
+  }
+}*/
+
+
+
+// ***CLOSE CONNECTION WITH SERVER***
+if (mysqli_close($con)) {
+  echo "Connection to database: FSDB successfully closed.";
 }
-
-// Execute Fantasy Footballers load query
-if (mysqli_query($con, $loadFF)) {
-  echo "Fantasy Footballers Table loaded successfully<br><br>";
-} else {
-  echo "Fantasy Footballers Table load FAILURE!:<br>" . mysqli_error() . "<br><br>";
-}
-
-// Execute NFL load query
-if (mysqli_query($con, $loadNFL)) {
-  echo "NFL Table loaded successfully<br><br>";
-} else {
-  echo "NFL Table load FAILURE!:<br>" . mysqli_error() . "<br><br>";
-}
-
-// Execute Yahoo Sports load query
-if (mysqli_query($con, $loadYahoo)) {
-  echo "Yahoo Table loaded successfully<br><br>";
-} else {
-  echo "Yahoo Table load FAILURE!:<br>" . mysqli_error() . "<br><br>";
-}
-
-
-
-// ***CLOSE CONNECTION WITH SERVER
-mysqli_close($con);
 ?>
