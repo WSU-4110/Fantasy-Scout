@@ -71,8 +71,8 @@ CREATE TABLE IF NOT EXISTS Players (
  $orgsTbl = '
  CREATE TABLE IF NOT EXISTS Organizations (
    orgID INT(3) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-   name VARCHAR(40) NOT NULL,
-   website VARCHAR(50) NOT NULL
+   name VARCHAR(40) NOT NULL UNIQUE,
+   website VARCHAR(50) NOT NULL UNIQUE
  );';
 
 // Make query to create Analysts TABLE

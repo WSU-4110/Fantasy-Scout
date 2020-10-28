@@ -24,16 +24,17 @@ $positions = array(
 for ($i=0; $i < sizeof($positions); $i++) {
   $posID = $positions[$i][0];
   $pos = $positions[$i][1];
-  $check = "
+  // NOTE: CHECK IS NOT WORKING!!!
+  /*$check = "
     SELECT 1
     FROM Positions
-    WHERE posID = $posID;
+    WHERE pos = $pos;
   ";
-  if (!mysqli_query($con, $check)) {
+  if (!mysqli_query($con, $check)) {*/
   // Position record does not exist in database, add it
     $load = "
       INSERT INTO Positions (posID, pos)
-      VALUES ($posID, $pos)
+      VALUES ('$posID', '$pos');
     ";
     if (mysqli_query($con, $load)) {
       echo "Position $posID loaded successfully<br><br>";
@@ -41,16 +42,16 @@ for ($i=0; $i < sizeof($positions); $i++) {
       echo "Position $pos load FAILURE!:<br>" . mysqli_error($con) . "<br><br>";
     }
   }
-  else {
+  /*else {
     // Position record already exists
     echo "Position $posID: $pos already exists in database.<br><br>";
   }
-}
+}*/
 
 
 
 // ***CLOSE CONNECTION WITH SERVER***
 if (mysqli_close($con)) {
-  echo "Connection to database: FSDB successfully closed."
+  echo "Connection to database: FSDB successfully closed.";
 }
 ?>
