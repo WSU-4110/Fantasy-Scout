@@ -14,9 +14,9 @@
       echo '<br>Username:' . $user;
       echo '<br>Password: ' . $pass;
       echo '<br>Database: ' . $db . '<br>';
-      die("Failed to connect to MySQL: " . mysqli_connect_error());
+      die("Failed to connect to MySQL: " . mysqli_connect_error() . "<br>");
    }
-   echo "Connected Successfully";
+   echo "Connected Successfully<br><br>";
 
 
 ?>

@@ -102,43 +102,43 @@ CREATE TABLE IF NOT EXISTS Predictions (
 
 // Position Table Creation
  if (mysqli_query($con, $posTbl)) {
-   echo "Positions Table Created Successfully<br>";
+   echo "Positions Table Created Successfully<br><br>";
  } else {
    echo "Positions Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';;
  }
 // Week Table Creation
 if (mysqli_query($con, $weekTbl)){
-  echo "Week Table Created Successfully<br>";
+  echo "Week Table Created Successfully<br><br>";
 } else {
   echo "Week Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';;
 }
 // Teams Table Creation
 if (mysqli_query($con, $teamsTbl)){
-  echo "Teams Table Created Successfully<br>";
+  echo "Teams Table Created Successfully<br><br>";
 } else {
   echo "Teams Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';;
 }
 // Players Table Creation
 if (mysqli_query($con, $playersTbl )){
-  echo "Players Table Created Successfully<br>";
+  echo "Players Table Created Successfully<br><br>";
 } else {
   echo "Players Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';
 }
 // Organizations table creation
 if (mysqli_query($con, $orgsTbl)){
-  echo "Organizations Table Created Successfully<br>";
+  echo "Organizations Table Created Successfully<br><br>";
 } else {
   echo "Organizations Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';
 }
 // Position Table Creation
 if (mysqli_query($con, $anlTbl)) {
-  echo "Analyst Table Created Successfully<br>";
+  echo "Analyst Table Created Successfully<br><br>";
 } else {
   echo "Analyst Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';
 }
 // Position Table Creation
 if (mysqli_query($con, $predTbl)) {
-  echo "Predictions Table Created Successfully<br>";
+  echo "Predictions Table Created Successfully<br><br>";
 } else {
   echo "Predictions Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';
 }
