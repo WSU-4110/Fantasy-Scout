@@ -1,0 +1,385 @@
+* { box-sizing: border-box; }
+
+
+/*BANNER///////////////////////////////////////////////////////////////////////////////////////*/
+header { background-color: #000000;
+         color: #00FF00;
+	 font-family: Georgia, serif; 
+	 line-height: 400%;  
+	 background-image: url(Images/Flight.jpg);
+	 background-position: right;
+	 background-repeat: no-repeat;
+	 height: 60px; 
+	 margin-bottom: 0px;
+	 text-align: center;
+}
+/*NAVAGATION///////////////////////////////////////////////////////////////////////////////////////*/
+nav {	font-weight: bold;
+      	background-color: #888888; 
+	padding: 5px;
+}
+
+nav a { text-decoration: none; }
+
+nav a:link { color: #00FF00; }
+
+nav a:visited { color: #FFFFFF; }
+
+nav a:hover { color: #000000; }
+
+
+/*PAGE CONTENT///////////////////////////////////////////////////////////////////////////////////////*/
+
+body {	background-color: #FFFFFF;
+	color: #666666;
+      	font-family: Verdana, Arial, sans-serif;
+}
+
+main { 	
+	padding-bottom: 2.5rem;
+}
+
+#container{
+	position: relative;
+	min-height: 100vh;
+}
+
+h2 { color: #000000;
+     font-family: Georgia, serif;
+}
+
+h3 { 	color: #333333;
+	font-weight: bold;
+}
+
+h4{	color: #000000;
+}
+
+p{	color: #111111;
+}
+
+dt { color: #000033; 
+    font-weight: bold; 
+}
+
+footer{ position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
+	font-size: .70em;
+	font-style: italic;
+	text-align: center;
+        padding: 10px;		
+	background-color: #EFEFEF; 
+	color: #000000;
+}
+
+
+
+/*TABLE CODE///////////////////////////////////////////////////////////////////////////////////////*/
+table { border: 1px solid #3399cc;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td, th { padding: 5px;
+	 border: 1px solid #000000;
+	 width: 33.3%;
+}
+
+td { text-align: center; }
+
+.text { text-align: left; }
+
+tr:nth-of-type(odd) { background-color: #BBFFBB; }
+
+.qa{ 	color: #000000;
+	font-weight: bold; 
+}
+
+
+/*FORM CODE///////////////////////////////////////////////////////////////////////////////////////*/
+label { float: left;
+	display: block;
+	width: 8em;
+	padding-right: 8em;
+}
+
+input { display: block;
+	margin-bottom: 1em;
+}
+	
+textarea { display: block;
+	margin-bottom: 1em;
+}
+
+
+#mySubmit { margin-left: 10em; }
+
+#mobile { display : none; }
+
+#desktop { display : inline; }
+
+
+
+/*FOUR SQUARE HOME///////////////////////////////////////////////////////////////////////////////////////*/
+
+#fourBox{ height: 540px; }
+
+#currentNews {	float: left;
+		width: 49.5%;
+		border: 2px solid #000000;	
+		background-color: #BBFFBB;
+		margin-bottom: 10px;
+		padding-left: 15px;
+		height: 260px;
+		
+} 
+
+#fanOpinions {	float: right;
+		width: 49.5%;
+		border: 2px solid #000000;
+		background-color: #BBFFBB;
+		margin-bottom: 10px;
+		padding-left: 15px;
+		height: 260px;
+}
+
+
+#gameTrends {	float: left;
+		width: 49.5%;
+		border: 2px solid #000000;
+		background-color: #BBFFBB;
+		margin-bottom: 10px;
+		padding-left: 15px;
+		height: 260px;
+} 
+
+
+#recordPace {	float: right;
+		width: 49.5%;
+		border: 2px solid #000000;
+		background-color: #BBFFBB;
+		margin-bottom: 10px;
+		padding-left: 15px;
+		height: 260px;
+}
+
+/*ARTICLE SETUP HOME///////////////////////////////////////////////////////////////////////////////////////*/
+
+.article { 	border: 2px solid #000000;
+		padding-left: 10px;
+		margin-bottom: 5px;
+}
+
+.picture{ margin-left: 20px; }
+
+.desc{	font-size: 60%;
+	margin-left: 160px;
+}
+
+
+
+/*PICTURE HELP///////////////////////////////////////////////////////////////////////////////////////*/
+#homehero { 	height: 300px;
+            	background-image: url(Images/logo.jpg);
+		background-size: 100% 100%; 
+		background-repeat: no-repeat; 
+		margin-bottom: 15px;
+}
+
+
+/*THREE COLUMN TREND///////////////////////////////////////////////////////////////////////////////////////*/
+.columnLeft {	float: left;
+		width: 33.3%;
+		border: 3px solid #000000;
+		background-color: #BBFFBB;
+		text-align: center;
+		height: 660px;
+		margin: 10px 0 10px 0;
+}
+
+.columnMiddle {	display: inline-block;
+		width: 33.3%;
+		border: 3px solid #000000;
+		background-color: #BBFFBB;
+		text-align: center;
+		height: 660px;
+		margin: 10px 0 10px 0;
+}
+
+.columnRight {	float: right;
+		width: 33.3%;
+		border: 3px solid #000000;
+		background-color: #BBFFBB;
+		text-align: center;
+		height: 660px;
+		margin: 10px 0 10px 0;
+}
+
+
+
+/*PRINT HELP///////////////////////////////////////////////////////////////////////////////////////*/
+@media print {
+
+.picture { display: none; }
+
+#noNavPrint { display: none; }
+
+#noFootPrint { display: none; }
+
+.newpage{page-break-before:always;}
+
+.columnLeft {	background-color: #FFFFFF; }
+
+.columnMiddle {	background-color: #FFFFFF; }
+
+.columnRight {	background-color: #FFFFFF; }
+
+#currentNews {	background-color: #BBFFBB; }
+
+#fanOpinions {	background-color: #BBFFBB; }
+
+#recordPace {	background-color: #BBFFBB; }
+
+#gameTrends {	background-color: #BBFFBB; }
+
+}
+
+/*MOBLIE HELP///////////////////////////////////////////////////////////////////////////////////////*/
+header, nav, main, footer { display: block; }
+
+
+@media only screen and (max-width: 1024px) {
+
+body {  padding: 0;
+	margin: 0;
+      	background-image: none;
+     	
+}
+
+
+h1 { margin: 0; }
+
+nav {	float: none;
+	width: auto;
+	padding: 0.5em;
+}
+
+
+nav li { display: inline-block; }
+
+nav a { padding : 1em; }
+
+
+main { 	
+	padding-bottom: 2.5rem;
+}
+
+#container{
+	position: relative;
+	min-height: 100vh;
+}
+footer{ position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
+	font-size: .70em;
+	font-style: italic;
+	text-align: center;
+        padding: 10px;		 
+}
+
+
+#fourBox{ height: 600px; }
+
+#currentNews { height: 300px; } 
+
+#fanOpinions { height: 300px; }
+
+#gameTrends { height: 260px; } 
+
+#recordPace { height: 260px; }
+
+.columnLeft { height: 830px; }
+
+.columnMiddle { height: 830px; }
+
+.columnRight { height: 830px; }
+
+
+#homehero{ margin-left: 0; }
+
+}
+
+@media only all and (max-width: 768px) {
+
+h1 {	padding-left: 0.3em;
+	height: 100%; 
+	font-size: 1.2em;
+	text-align:left;
+
+}
+
+nav {	padding: 0; }
+
+nav a { display : block;
+	padding: 0.2em;
+	font-size: 1.3em;
+	border-bottom: 1px solid #000033;
+}
+
+nav ul {margin: 0;
+	padding-left: 0;
+}
+
+nav li{ display: block;
+	margin: 0;
+	padding: 0;
+}
+
+main { 	
+	padding-bottom: 2.5rem;
+}
+
+#container{
+	position: relative;
+	min-height: 100vh;
+}
+
+footer{ position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
+	font-size: .70em;
+	font-style: italic;
+	text-align: center;
+        padding: 10px;		 
+}
+
+
+#homehero{ display: none; }
+
+#fourBox{ height: 730px; }
+
+#currentNews { height: 450px; } 
+
+#fanOpinions { height: 450px; }
+
+#gameTrends { height: 260px; } 
+
+#recordPace { height: 260px; }
+
+.columnLeft { height: 1300px; }
+
+.columnMiddle { height: 1300px; }
+
+.columnRight { height: 1300px; }
+
+#homehero{ margin-left: 0; }
+
+#mobile{ display: inline; }
+
+#desktop{ display: none; }
+
+}
