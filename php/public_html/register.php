@@ -8,6 +8,8 @@ $username = "test_username";
 $password = "test_password";
 $email = "user_@test.com";
 
+
+
 // ***DEFINE QUERY STRINGS***
 // Query string to register new user
 $reg = "
