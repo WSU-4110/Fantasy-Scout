@@ -7,6 +7,8 @@ require 'init.php';
 $username = "test_username1";
 $password = "test_password";
 
+
+
 // ***DEFINE QUERY STRINGS***
 // Query string to check if account with identical email or username exists
 $logincheck = "
@@ -15,7 +17,7 @@ $logincheck = "
   WHERE username = '$username' OR email = '$username' AND password = '$password';
 ";
 $login = mysqli_num_rows(mysqli_query($con, $logincheck));
-echo $login . "<br><br>";
+
 
 
 // ***LOGIN USER***

@@ -3,6 +3,8 @@
 // Database onnection script
 require 'init.php';
 
+
+
 // User login variables
 $username = "test_username";
 $password = "test_password";
