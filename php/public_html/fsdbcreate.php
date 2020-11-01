@@ -22,6 +22,16 @@ CREATE TABLE IF NOT EXISTS Week (
   endDay INT(2) NOT NULL
  );';
 
+ // Make query to create Accounts table
+ $acctTbl = '
+ CREATE TABLE IF NOT EXISTS Accounts (
+   acctID INT(5) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   username VARCHAR(20) NOT NULL,
+   password VARCHAR(20) NOT NULL,
+   email VARCHAR(30) NOT NULL,
+   regDate VARCHAR(10) NOT NULL
+  );';
+
  // Make query to create Teams Table
 $teamsTbl = '
 CREATE TABLE IF NOT EXISTS Teams(
@@ -122,6 +132,12 @@ if (mysqli_query($con, $weekTbl)){
   echo "Week Table Created Successfully<br><br>";
 } else {
   echo "Week Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';;
+}
+// Account Table Creation
+if (mysqli_query($con, $acctTbl)){
+  echo "Accounts Table Created Successfully<br><br>";
+} else {
+  echo "Accounts Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';;
 }
 // Teams Table Creation
 if (mysqli_query($con, $teamsTbl)){
