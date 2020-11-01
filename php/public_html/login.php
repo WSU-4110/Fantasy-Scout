@@ -4,29 +4,28 @@
 require 'init.php';
 
 // User login variables
-$user = "";
-$pass = "";
+$username = "test_username1";
+$password = "test_password";
 
 // ***DEFINE QUERY STRINGS***
 // Query string to check if account with identical email or username exists
 $logincheck = "
-  SELECT (
-    SELECT accID
-    FROM Accounts
-    WHERE username = $user OR email = $user AND password = $pass;
-    ) AS accID
-"
-
+  SELECT acctID
+  FROM Accounts
+  WHERE username = '$username' OR email = '$username' AND password = '$password';
+";
+$login = mysqli_num_rows(mysqli_query($con, $logincheck));
+echo $login . "<br><br>";
 
 
 // ***LOGIN USER***
-if (mysqli_query($con, $logincheck)) {
+if ($login) {
 // Login found record with idential username or email AND identical password
 // Login Successful
-echo "Account $user successfully logged in.<br><br>";
+echo "Account $username successfully logged in.<br><br>";
 } else {
   // ERROR! New user could not be created
-  echo "User with those login credentials could not be found.<br>Please try again.<br><br>";
+  echo "User with those login credentials<br>Username: $username<br>Password: $password<br>could not be found. Please try again.<br><br>" . mysqli_error($con);
 }
 
 

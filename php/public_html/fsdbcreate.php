@@ -29,7 +29,9 @@ CREATE TABLE IF NOT EXISTS Week (
    username VARCHAR(20) NOT NULL,
    password VARCHAR(20) NOT NULL,
    email VARCHAR(30) NOT NULL,
-   regDate VARCHAR(10) NOT NULL
+   regDate INT(8) NOT NULL,
+   UNIQUE(username),
+   UNIQUE(email)
   );';
 
  // Make query to create Teams Table
