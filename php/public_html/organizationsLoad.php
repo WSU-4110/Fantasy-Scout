@@ -28,7 +28,7 @@ for ($i=0; $i < sizeof($orgs); $i++) {
   if (!mysqli_query($con, $check)) {*/
   // Organization record does not exist in database, add it
     $load = "
-      INSERT INTO organizations (name, website)
+      INSERT INTO Organizations (name, website)
       VALUES ('$name', '$website');
     ";
     if (mysqli_query($con, $load)) {
