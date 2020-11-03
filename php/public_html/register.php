@@ -9,17 +9,21 @@ require 'init.php';
 $username = $_POST["myUname"];
 $email = $_POST["myEmail"];
 $password = $_POST["myPword"];
-$fname = $_POST["myFname"];
+/*$fname = $_POST["myFname"];
 $lname = $_POST["myLname"];
-$phone = $_POST["myPhone"];
+$phone = $_POST["myPhone"];*/
 
 
 
 // ***DEFINE QUERY STRINGS***
 // Query string to register new user
+/*
+INSERT INTO Accounts (username, password, email, fname, lname, phone, regDate)
+VALUES ('$username', '$password', '$email', '$fname', '$lname', '$phone', CURRENT_DATE());
+*/
 $reg = "
-  INSERT INTO Accounts (username, password, email, fname, lname, phone, regDate)
-  VALUES ('$username', '$password', '$email', '$fname', '$lname', '$phone', CURRENT_DATE());
+  INSERT INTO Accounts (username, password, email, regDate)
+  VALUES ('$username', '$password', '$email', CURRENT_DATE());
 ";
 
 
