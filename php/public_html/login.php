@@ -14,7 +14,7 @@ $password = $_POST["myPword"];
 $logincheck = "
   SELECT acctID
   FROM Accounts
-  WHERE username = '$username' OR email = '$username' AND password = '$password';
+  WHERE username = '$username' AND password = '$password' OR email = '$username' AND password = '$password';
 ";
 $login = mysqli_num_rows(mysqli_query($con, $logincheck));
 
