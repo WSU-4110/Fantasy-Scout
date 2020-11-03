@@ -6,17 +6,20 @@ require 'init.php';
 
 
 // User login variables
-$username = "test_username";
-$password = "test_password";
-$email = "user_@test.com";
+$username = $_POST["myUname"];
+$email = $_POST["myEmail"];
+$password = $_POST["myPword"];
+$fname = $_POST["myFname"];
+$lname = $_POST["myLname"];
+$phone = $_POST["myPhone"];
 
 
 
 // ***DEFINE QUERY STRINGS***
 // Query string to register new user
 $reg = "
-  INSERT INTO Accounts (email, username, password, regDate)
-  VALUES ('$email', '$username', '$password', CURRENT_DATE());
+  INSERT INTO Accounts (username, password, email, fname, lname, phone, regDate)
+  VALUES ('$username', '$password', '$email', '$fname', '$lname', '$phone', CURRENT_DATE());
 ";
 
 

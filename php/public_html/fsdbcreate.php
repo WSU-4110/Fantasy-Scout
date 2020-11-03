@@ -29,7 +29,10 @@ CREATE TABLE IF NOT EXISTS Week (
    username VARCHAR(20) NOT NULL,
    password VARCHAR(20) NOT NULL,
    email VARCHAR(30) NOT NULL,
+   fname VARCHAR(20),
+   lname VARCHAR(25),
    regDate INT(8) NOT NULL,
+   phone INT(14),
    UNIQUE(username),
    UNIQUE(email)
   );';

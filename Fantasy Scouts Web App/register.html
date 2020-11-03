@@ -20,7 +20,7 @@
 </header>
 <nav id="noNavPrint">
 <a href="index.html">Home</a> &nbsp;
-<a href="analyst.html">Analyst Hub</a> &nbsp;  
+<a href="analyst.html">Analyst Hub</a> &nbsp;
 <a href="chat.html">Chat</a> &nbsp;
 <a href="search.html">Search</a>
 </nav>
@@ -29,11 +29,13 @@
 <main>
 <h3>Register</h3>
 <p>Get all the news and opinions by subscribing</p>
-<form method="post" action="mailto::ganggreen@fanpage.com">
-<label for="myFName">First&nbsp;Name:</label> <input type="text" name="myFName" id="myFName" required="required"><br>
-<label for="myLName">Last&nbsp;Name:</label><input type="text" name="myLName" id="myLName" required="required"><br>
-<label for="myEmail">Email:</label><input type="email" name="myEmail" id="myEmail" required="required"><br>
-<label for="myPhone">Phone:(Optional)</label><input type="tel" name="myPhone" id="myPhone"><br>
+<form method="post" action="register.php">
+<label for="myUname">Username*:</label><input type="text" name="myUname" id="myUname" required="required"><br>
+<label for="myEmail">Email*:</label><input type="email" name="myEmail" id="myEmail" required="required"><br>
+<label for="myPword">Password*:</label><input type="text" name="myPword" id="myPword" required="required"><br>
+<label for="myFName">First&nbsp;Name:</label> <input type="text" name="myFName" id="myFName"><br>
+<label for="myLName">Last&nbsp;Name:</label><input type="text" name="myLName" id="myLName"><br>
+<label for="myPhone">Phone:</label><input type="tel" name="myPhone" id="myPhone"><br>
 <input type="submit" id="mySubmit">
 </form>
 <br>
