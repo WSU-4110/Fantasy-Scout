@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+<title>Forms</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, inital scale =1.0">
+<link rel="stylesheet" href="ganggreen.css">
+</head>
+<body>
+<div id="container">
+<header>
+<h1>Fantasy Scouts</h1>
+</header>
+<nav id="noNavPrint">
+<a href="index.html">Home</a> &nbsp;
+<a href="analyst.html">Analyst Hub</a> &nbsp;
+<a href="chat.html">Chat</a> &nbsp;
+<a href="search.html">Search</a>
+</nav>
+<div id="homehero">
+</div>
+<main>
+<h3>Login</h3>
+<p>Login in to your Fantasy Scouts account<br>Don't have an account? <a href="https://fantasyscoutserver.000webhostapp.com/Fantasy-Scout/Fantasy%20Scouts%20Web%20App/register.html">Register here</a></p>
+<form method="post" action="../php/public_html/login.php">
+<label for="myUname">Username<br>or Email:</label><input type="text" name="myUname" id="myUname" required="required"><br><br>
+<label for="myPword">Password*:</label><input type="text" name="myPword" id="myPword" required="required"><br>
+<input type="submit" id="mySubmit">
+</form>
+<br>
+</main>
+<footer id="noFootPrint">
+Copyright &copy; 2020 Fantasy Scouts<br>
+<a href="mailto:fantasy@scouts.com">Contact Us: fantasy@scouts.com</a>
+</footer>
+</div>
+</body>
+</html>

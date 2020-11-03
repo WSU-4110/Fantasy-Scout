@@ -4,8 +4,8 @@
 require 'init.php';
 
 // User login variables
-$username = "test_username1";
-$password = "test_password";
+$username = $_POST["myUname"];
+$password = $_POST["myPword"];
 
 
 
