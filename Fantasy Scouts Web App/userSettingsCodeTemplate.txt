@@ -1,0 +1,47 @@
+//This Design Will be added a part of sprint 3 and this is just a standby template
+//This is for functional Requirement #9
+
+public interface State { 
+	public void displayUserPreference(); //Display User Preference or Default
+  	public void saveUserPreference(); //Save User Preference or Prompt Login
+}
+
+public class UserLoggedIn implements State {//The User is logged in to an account
+	@Override
+	public void displayUserPreference() {
+		System.out.println(“User Preferences Displaying");
+	}
+       public void saveUserPreference() {
+		System.out.println(“Preference Saved and Updated");
+	}
+}
+
+
+public class GuestLoggedIn implements State {//The user is a guest
+	@Override
+	public void displayUserPreference() {
+		System.out.println(“Displaying Site Default");
+	}
+       public void saveUserPreference() {
+		System.out.println(“Please Login to Save Preferences");
+	}
+}
+
+public class SiteContext{
+	private State onState =new UserLoggedIn (); //User Logged In
+      	private State offState=new GuestLoggedIn();//A Guest
+	private State currentState=offState;//User Starts as a Guest
+	public void loginButtonHit() {
+		if(currentState==onState)
+			currentState=offState; //User Logged Out
+		else 
+			currentState=onState; //User Logged In
+	}
+	public void displayUserPreference () {
+		this.currentState.displayUserPreference ();		
+     	 }
+	@Override
+	public void saveUserPreference () {
+		this.currentState.saveUserPreference ();
+	}
+}
