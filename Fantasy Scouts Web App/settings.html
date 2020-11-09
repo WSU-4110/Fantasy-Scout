@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, inital scale =1.0">
 <link rel="stylesheet" href="ganggreen.css">
 </head>
-<body>
+<body class = "theme-auto">
 <div id="container">
 <header>
 <h1>Fantasy Scouts</h1>
@@ -25,7 +25,15 @@
 </div>
 <main>
 <h2>Your Settings</h2>
-<h4>Dark Mode: On</h4>
+
+<!-- Dark Mode -->
+<h4>Dark Mode</h4>
+<select id="theme">
+    <option value="auto">Auto</option>
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+</select>
+
 <h4>Slow Scroll: Off</h4>
 <h4>Search History: Off</h4>
 <h4>Text Style: Normal</h4>
@@ -35,5 +43,33 @@ Copyright &copy; 2020 Fantasy Scouts<br>
 <a href="mailto:fantasy@scouts.com">Contact Us: fantasy@scouts.com</a>
 </footer>
 </div>
+
+<script>
+	function applyTheme(theme) {
+    document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+    document.body.classList.add(`theme-${theme}`);
+    }
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        const savedTheme = localStorage.getItem("theme" || "auto");
+
+        applyTheme(savedTheme);
+
+        for (const optionElement of document.querySelectorAll("#selTheme option")) {
+            optionElement.selected = savedTheme === optionElement.value;
+        }
+
+        document.querySelector("#theme").addEventListener("change", function() {
+            localStorage.setItem("theme", this.value);
+            applyTheme(this.value);
+        });
+    });
+	</script>
+
 </body>
 </html>
+
+function applyTheme(theme) {
+    document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+    document.body.classList.add(`theme-${theme}`);
+}

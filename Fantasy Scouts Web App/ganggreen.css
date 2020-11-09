@@ -1,6 +1,4 @@
 * { box-sizing: border-box; }
-
-
 /*BANNER///////////////////////////////////////////////////////////////////////////////////////*/
 header { background-color: #000000;
          color: #00FF00;
@@ -30,10 +28,63 @@ nav a:hover { color: #000000; }
 
 /*PAGE CONTENT///////////////////////////////////////////////////////////////////////////////////////*/
 
-body {	background-color: #FFFFFF;
+/* body {	background-color: #FFFFFF;
 	color: #666666;
       	font-family: Verdana, Arial, sans-serif;
+} */
+
+/*PAGE CONTENT///////////////////////////////////////////////////////////////////////////////////////*/
+:root {
+	--dark-background-color: #111111;
+	--dark-background-color-alt: #222222;
+	--dark-trim-color: #333333;
+	--dark-text-color: #333333;
+	--dark-h2-color: #eeeeee;
 }
+
+body {
+	/* Light Theme */
+    --background-color: #FFFFFF;
+	--text-color: #666666;
+	--font-family: Verdana, Arial sans-serif;
+	
+	background: var(--background-color);
+	font-family: var(--font-family);
+	color: var(--text-color);
+}
+
+h2 {
+	--h2-color: #000000;
+	
+	color: var(--h2-color);
+	font-family: Georgia, serif;
+}
+
+h3 { 	color: #333333;
+   font-weight: bold;
+}
+
+body.theme-dark {
+    --background-color: var(--dark-background-color);
+	--text-color: var(--dark-text-color);
+	--trim-color: var(--dark-trim-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    body.theme-auto {
+        --background-color: var(--dark-background-color);
+		--text-color: var(--dark-text-color);
+		--trim-color: var(--dark-trim-color);
+	}
+	h2.theme-auto {
+		--text-color: var(--dark-h2-color);
+	}
+	/* h3.theme-auto {
+		color:  #eeeeee;
+	} */
+}
+
+/*PAGE CONTENT///////////////////////////////////////////////////////////////////////////////////////*/
 
 main { 	
 	padding-bottom: 2.5rem;
@@ -44,23 +95,23 @@ main {
 	min-height: 100vh;
 }
 
-h2 { color: #000000;
+/* h2 { color: #000000;
      font-family: Georgia, serif;
-}
+} */
 
-h3 { 	color: #333333;
+/* h3 { 	color: #333333;
 	font-weight: bold;
-}
+} */
 
-h4{	color: #000000;
-}
+/* h4{	color: #000000;
+} */
 
-p{	color: #111111;
-}
+/* p{	color: #111111;
+} */
 
-dt { color: #000033; 
+/* dt { color: #000033; 
     font-weight: bold; 
-}
+} */
 
 footer{ position: absolute;
 	bottom: 0;

@@ -10,7 +10,8 @@
 <meta name="viewport" content="width=device-width, inital scale =1.0">
 <link rel="stylesheet" href="ganggreen.css">
 </head>
-<body>
+<!-- <body> -->
+<body class = "theme-auto">
 <div id="container">
 <header>
 <h1>Fantasy Scouts</h1>
@@ -24,11 +25,11 @@
 <div id="homehero">
 </div>
 <main>
-<h2>Welcome to your Fantasy Scouts Hub</h2>
+<h2 class = "theme-auto"></h2class>Welcome to your Fantasy Scouts Hub</h2>
 <p>WORDS TO ADD HERE</p>
 <div id="fourBox">
 <div id="currentNews">
-<h3><a href="analyst.html">Your Analysts</a></h3>
+<h3 class = "theme-auto"></h2class><a href="analyst.html">Your Analysts</a></h3>
 <dl>
 	<dt><a href="analyst.html">Analyst 1</a></dt>
 		<dd>WORDS TO ADD HERE</dd>
@@ -90,4 +91,29 @@ Copyright &copy; 2020 Fantasy Scouts<br>
 </footer>
 </div>
 </body>
+
+<script>
+	function applyTheme(theme) {
+    document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+	document.body.classList.add(`theme-${theme}`);
+	document.h2.remove("theme-auto", "theme-light", "theme-dark");
+    document.h2.add(`theme-${theme}`);
+    }
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        const savedTheme = localStorage.getItem("theme" || "auto");
+
+        applyTheme(savedTheme);
+
+        for (const optionElement of document.querySelectorAll("#selTheme option")) {
+            optionElement.selected = savedTheme === optionElement.value;
+        }
+
+        document.querySelector("#theme").addEventListener("change", function() {
+            localStorage.setItem("theme", this.value);
+            applyTheme(this.value);
+        });
+    });
+	</script>
+
 </html>

@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, inital scale =1.0">
 <link rel="stylesheet" href="ganggreen.css">
 </head>
-<body>
+<body class = "theme-auto">
 <div id="container">
 <header>
 <h1>Fantasy Scouts</h1>
@@ -39,4 +39,27 @@ Copyright &copy; 2020 Fantasy Scouts<br>
 </footer>
 </div>
 </body>
+
+<script>
+	function applyTheme(theme) {
+    document.body.classList.remove("theme-auto", "theme-light", "theme-dark");
+    document.body.classList.add(`theme-${theme}`);
+    }
+    
+    document.addEventListener("DOMContentLoaded", () => {
+        const savedTheme = localStorage.getItem("theme" || "auto");
+
+        applyTheme(savedTheme);
+
+        for (const optionElement of document.querySelectorAll("#selTheme option")) {
+            optionElement.selected = savedTheme === optionElement.value;
+        }
+
+        document.querySelector("#theme").addEventListener("change", function() {
+            localStorage.setItem("theme", this.value);
+            applyTheme(this.value);
+        });
+    });
+    </script>
+    
 </html>
