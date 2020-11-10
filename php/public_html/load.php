@@ -10,6 +10,7 @@ require 'init.php';
 $files = array(
     "loadTeams.txt",
     "loadPos.txt",
+    "loadWeeks.txt",
     "loadOrgs.txt"
 );
 
