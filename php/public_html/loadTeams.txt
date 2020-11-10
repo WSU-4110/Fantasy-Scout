@@ -1,0 +1,10 @@
+Teams
+teamName,city,wins,losses,ties,confr,divsn
+'Seahawks','Seattle','5','1','0','NFC','West'
+'Cardinals','Arizona','5','2','0','NFC','West'
+'Rams','Los Angeles','5','2','0','NFC','West'
+'49ers','San Francisco','4','3','0','NFC','West'
+'Packers','Green Bay','5','1','0','NFC','North'
+'Chicago','Bears','5','2','0','NFC','North'
+'Lions','Detroit','3','3','0','NFC','North'
+'Vikings','Minnesota','1','5','0','NFC','North'
