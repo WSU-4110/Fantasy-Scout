@@ -8,15 +8,17 @@ require 'init.php';
 // Formatted .txt files to be loaded into database.
 // First line contains table name, second line contains the PHP insert string
 $files = array(
-    "loadTeams.txt";
+    "loadTeams.txt",
+    "loadPos.txt",
+    "loadOrgs.txt"
 );
 
 
 
 // For each file to be loaded, load the formatted .txt file into the database
-for ($i = 0, i < sizeof($files)) {
+for ($i = 0; $i < sizeof($files); $i++) {
     // Open the current file
-    $file = fopen($teams);
+    $file = fopen($files[$i], "r");
 
     // First line is the table name
     $table = fgets($file);
