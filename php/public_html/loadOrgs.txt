@@ -1,0 +1,6 @@
+Organizations
+name,website
+'ESPN','https://www.espn.com/fantasy/football/'
+'Fantasy Footballers','https://www.thefantasyfootballers.com/'
+'NFL','https://fantasy.nfl.com/'
+'Yahoo Sports','https://sports.yahoo.com/'
