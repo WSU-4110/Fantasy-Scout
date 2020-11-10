@@ -28,12 +28,6 @@ nav a:hover { color: #000000; }
 
 /*PAGE CONTENT///////////////////////////////////////////////////////////////////////////////////////*/
 
-/* body {	background-color: #FFFFFF;
-	color: #666666;
-      	font-family: Verdana, Arial, sans-serif;
-} */
-
-/*PAGE CONTENT///////////////////////////////////////////////////////////////////////////////////////*/
 :root {
 	--dark-background-color: #111111;
 	--dark-background-color-alt: #222222;
@@ -79,6 +73,7 @@ body.theme-dark {
 	h2.theme-auto {
 		--text-color: var(--dark-h2-color);
 	}
+
 	/* h3.theme-auto {
 		color:  #eeeeee;
 	} */
