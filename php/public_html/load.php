@@ -44,6 +44,7 @@ for ($i = 0; $i < sizeof($files); $i++) {
             echo "Team load FAILURE!:<br>" . mysqli_error($con) . "<br><br>";
         }
     }
+    fclose($file);
 }
 
 
