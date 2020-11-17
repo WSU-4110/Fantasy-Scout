@@ -35,7 +35,7 @@ for ($i = 0; $i < sizeof($files); $i++) {
     $values = fgets($file);
 
     // Place data fields into variables
-    sscanf($values,"'%s','%s','%s','%s','%s'",$fname,$lname,$pos,$team,$rank);
+    sscanf($values,"'%s','%s','%s','%s','%u'",$fname,$lname,$pos,$team,$rank);
     // String to check if player with matching first and last name exists
     $existingPlayerCheck = "
       SELECT playerID
