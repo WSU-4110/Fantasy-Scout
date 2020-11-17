@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS Week (
  // Make query to create Teams Table
 $teamsTbl = '
 CREATE TABLE IF NOT EXISTS Teams(
-  teamID INT(2) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  teamID CHAR(3) NOT NULL PRIMARY KEY,
   teamName VARCHAR(25),
   city VARCHAR(30),
   wins INT(2) UNSIGNED,
