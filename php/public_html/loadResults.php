@@ -8,8 +8,8 @@ require 'init.php';
 // Formatted .txt files to be loaded into database.
 // First line contains table name, second line contains the PHP insert string
 $files = array(
-  "exampledatafile1.txt",
-  "exampledatafile2.txt"
+  "/../txt/exampledatafile1.txt",
+  "/../txt/exampledatafile2.txt"
 );
 
 
