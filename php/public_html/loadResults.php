@@ -38,12 +38,13 @@ for ($i = 0; $i < sizeof($files); $i++) {
     sscanf($values,"'%s','%s','%s','%s','%u'",$fname,$lname,$pos,$team,$rank);
     // String to check if player with matching first and last name exists
     $existingPlayerCheck = "
-      SELECT playerID
+      SELECT *
       FROM $table
       WHERE fname = '$fname' AND lname = '$lname';
     ";
     // Player data string
-    $player = mysqli_fetch_assoc(mysqli_query($con, $existingPlayerCheck))
+    $result = mysqli_query($con, $existingPlayerCheck);
+    $player = mysqli_fetch_assoc($result);
     $playerID = $player["playerID"];
 
     // Player already exists, update information
