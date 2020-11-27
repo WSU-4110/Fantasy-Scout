@@ -17,17 +17,12 @@ $files = array(
 // For each file to be loaded, load the formatted .txt file into the database
 for ($i = 0; $i < sizeof($files); $i++) {
   // Open the current file
-  $k = 0;
   $file = fopen($files[$i], "r");
 
   // First line is the table name
   $table = fgets($file);
-  $k += 1;
-  echo "Line number: $k";
   // Second line contains week Number
   $weekNum = fgets($file);
-  $k += 1;
-  echo "Line number: $k";
   // fgets() adds 1 extra whitespace to end of weekNum which breaks formatting.
   // split string into array and ensure that weekNum contains only 2 digits with no whitespace
   $weekNum = str_split($weekNum);
@@ -35,8 +30,6 @@ for ($i = 0; $i < sizeof($files); $i++) {
   $week = "week".$weekNum."Rank";
   // Third line contains the data fields in the database that are being inserted into
   $insertString = fgets($file);
-  $k += 1;
-  echo "Line number: $k";
 
 
 
@@ -47,8 +40,6 @@ for ($i = 0; $i < sizeof($files); $i++) {
     // .txt files may contain lines of whitespace at the end which will result in previous line being added multiple times.
     // If line of whitespace is detected, move to next file or end loop.
     if ($values == "") { continue; }
-    $k += 1;
-    echo "Line number: $k";
 
     // Place data fields into variables
     sscanf($values,"%s %s %s %s %u",$fname,$lname,$pos,$team,$rank);
@@ -64,18 +55,16 @@ for ($i = 0; $i < sizeof($files); $i++) {
     }
     else {
         $player = false;
-        echo "Player = false<br><br>";
+
     }
 
     // Player doesn't already exist in database, add new player
     if (!$player) {
         // String containing SQL INSERT statement to be executed on mysql database to add new player
-        echo "<br><br>Insert String: ".$insertString."<br><br>";
         $load = "
             INSERT INTO $table ($insertString,$week,gamesPlayed,avgRank)
             VALUES ('$fname','$lname','$pos','$team','$rank',1,'$rank');
         ";
-        echo $load . "<br><br>";
         if (mysqli_query($con, $load)) {
           echo "$fname $lname record successfully added into players table.<br><br>";
         }
