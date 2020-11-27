@@ -23,7 +23,9 @@ for ($i = 0; $i < sizeof($files); $i++) {
   $table = fgets($file);
   // Second line contains week Number
   $weekNum = fgets($file);
-  $week = "week" . $weekNum . "Rank";
+  $weekNum = str_split($weekNum);
+  $weekNum = "$weekNum[0]"."$weekNum[1]";
+  $week = "week".$weekNum."Rank";
   // Third line contains the data fields in the database that are being inserted into
   $insertString = fgets($file);
 
@@ -35,25 +37,24 @@ for ($i = 0; $i < sizeof($files); $i++) {
     $values = fgets($file);
 
     // Place data fields into variables
-    sscanf($values,"'%s','%s','%s','%s','%u'",$fname,$lname,$pos,$team,$rank);
-    // String to check if player with matching first and last name exists
-    echo "Values string:".$values."<br>";
-    echo "fname string:".$fname."<br>";
-    echo "lname string:".$lname."<br>";
-    echo "pos string:".$pos."<br>";
-    echo "team string:".$team."<br>";
-    echo "rank string".$rank."<br>";
+    sscanf($values,"%s %s %s %s %u",$fname,$lname,$pos,$team,$rank);
     $existingPlayerCheck = "
-      SELECT playerID
+      SELECT *
       FROM $table
       WHERE fname = '$fname' AND lname = '$lname';
     ";
     // Player data string
-    $player = mysqli_fetch_assoc(mysqli_query($con, $existingPlayerCheck)) or die(mysqli_error($con));
-    $playerID = $player["playerID"];
+    $playerExistsCheck = mysqli_query($con, $existingPlayerCheck);
+    if ($playerExistsCheck) {
+        $player = mysqli_fetch_array(mysqli_query($con, $existingPlayerCheck));
+    }
+    else {
+        $player = false;
+        echo "Player = false<br><br>";
+    }
 
     // Player already exists, update information
-    if ($playerID != 0) {
+    if ($player) {
       $gamesPlayed = $player["gamesPlayed"] + 1;
 
       // Calculate new average rank
@@ -79,20 +80,27 @@ for ($i = 0; $i < sizeof($files); $i++) {
         SET $week = $rank, gamesPlayed = $gamesPlayed, avgRank = $avg
         WHERE playerID = $playerID;
       ";
-      mysqli_query($con,$update);
+        if (mysqli_query($con,$update)) {
+            echo "$fname $lname record successfully updated.<br><br>";
+        }
+        else {
+            echo "ERROR! $fname $lname record UNSUCCESSFULLY updated.<br><br>";
+        }
     }
     // Player doesn't already exist in database, add new player
     else {
       // String containing SQL INSERT statement to be executed on mysql database to add new player
+      echo "<br><br>Insert String: ".$insertString."<br><br>";
       $load = "
-          INSERT INTO $table ($insertString,gamesPlayed)
-          VALUES ($values,1);
+          INSERT INTO $table ($insertString,$week,gamesPlayed)
+          VALUES ('$fname','$lname','$pos','$team','$rank',1);
       ";
+      echo $load . "<br><br>";
       if (mysqli_query($con, $load)) {
-        echo "Team loaded successfully into fsdb<br><br>";
+        echo "$fname $lname record successfully added into players table.<br><br>";
       }
       else {
-        echo "Team load FAILURE!:<br>" . mysqli_error($con) . "<br><br>";
+        echo "$fname $lname record UNSUCCESSFULLY added into players table.<br>ERROR: ".mysqli_error($con)."<br><br>";
       }
     }
   }
