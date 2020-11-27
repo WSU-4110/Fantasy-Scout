@@ -23,6 +23,8 @@ for ($i = 0; $i < sizeof($files); $i++) {
   $table = fgets($file);
   // Second line contains week Number
   $weekNum = fgets($file);
+  // fgets() adds 1 extra whitespace to end of weekNum which breaks formatting.
+  // split string into array and ensure that weekNum contains only 2 digits with no whitespace
   $weekNum = str_split($weekNum);
   $weekNum = "$weekNum[0]"."$weekNum[1]";
   $week = "week".$weekNum."Rank";
@@ -37,25 +39,13 @@ for ($i = 0; $i < sizeof($files); $i++) {
     $values = fgets($file);
 
     // Place data fields into variables
-<<<<<<< HEAD
     sscanf($values,"%s %s %s %s %u",$fname,$lname,$pos,$team,$rank);
-=======
-    sscanf($values,"'%s','%s','%s','%s','%u'",$fname,$lname,$pos,$team,$rank);
-    // String to check if player with matching first and last name exists
-    echo "Values string:".$values."<br>";
-    echo "fname string:".$fname."<br>";
-    echo "lname string:".$lname."<br>";
-    echo "pos string:".$pos."<br>";
-    echo "team string:".$team."<br>";
-    echo "rank string".$rank."<br>";
->>>>>>> fd9022ef8224c3583aaf3e325ad5e4df839eb384
     $existingPlayerCheck = "
       SELECT *
       FROM $table
       WHERE fname = '$fname' AND lname = '$lname';
     ";
     // Player data string
-<<<<<<< HEAD
     $playerExistsCheck = mysqli_query($con, $existingPlayerCheck);
     if ($playerExistsCheck) {
         $player = mysqli_fetch_array(mysqli_query($con, $existingPlayerCheck));
@@ -64,10 +54,6 @@ for ($i = 0; $i < sizeof($files); $i++) {
         $player = false;
         echo "Player = false<br><br>";
     }
-=======
-    $player = mysqli_fetch_assoc(mysqli_query($con, $existingPlayerCheck)) or die(mysqli_error($con));
-    $playerID = $player["playerID"];
->>>>>>> fd9022ef8224c3583aaf3e325ad5e4df839eb384
 
     // Player already exists, update information
     if ($player) {
@@ -76,7 +62,7 @@ for ($i = 0; $i < sizeof($files); $i++) {
       // Calculate new average rank
       $avg = 0;
       // Get ranks from all existing weeks
-      for ($j = 0; $j < $gamesPlayed-1; $j++) {
+      for ($j = 1; $j < $gamesPlayed; $j++) {
         // If week is single digit, add 0 in front to go along with formatting
         // of field naming conventions in database
         if ($j < 10) {
@@ -94,7 +80,7 @@ for ($i = 0; $i < sizeof($files); $i++) {
       $update = "
         UPDATE Players
         SET $week = $rank, gamesPlayed = $gamesPlayed, avgRank = $avg
-        WHERE playerID = $playerID;
+        WHERE playerID = ".$player['playerID'].";
       ";
         if (mysqli_query($con,$update)) {
             echo "$fname $lname record successfully updated.<br><br>";
@@ -108,8 +94,8 @@ for ($i = 0; $i < sizeof($files); $i++) {
       // String containing SQL INSERT statement to be executed on mysql database to add new player
       echo "<br><br>Insert String: ".$insertString."<br><br>";
       $load = "
-          INSERT INTO $table ($insertString,$week,gamesPlayed)
-          VALUES ('$fname','$lname','$pos','$team','$rank',1);
+          INSERT INTO $table ($insertString,$week,gamesPlayed,avgRank)
+          VALUES ('$fname','$lname','$pos','$team','$rank',1,'$rank');
       ";
       echo $load . "<br><br>";
       if (mysqli_query($con, $load)) {
