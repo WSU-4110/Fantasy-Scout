@@ -23,7 +23,9 @@ for ($i = 0; $i < sizeof($files); $i++) {
   $table = fgets($file);
   // Second line contains week Number
   $weekNum = fgets($file);
-  $week = "week" . $weekNum . "Rank";
+  $weekNum = str_split($weekNum);
+  $weekNum = "$weekNum[0]"."$weekNum[1]";
+  $week = "week".$weekNum."Rank";
   // Third line contains the data fields in the database that are being inserted into
   $insertString = fgets($file);
 
@@ -48,6 +50,7 @@ for ($i = 0; $i < sizeof($files); $i++) {
     }
     else {
         $player = false;
+        echo "Player = false<br><br>";
     }
 
     // Player already exists, update information
@@ -89,9 +92,10 @@ for ($i = 0; $i < sizeof($files); $i++) {
       // String containing SQL INSERT statement to be executed on mysql database to add new player
       echo "<br><br>Insert String: ".$insertString."<br><br>";
       $load = "
-          INSERT INTO $table ($insertString,gamesPlayed)
-          VALUES ($fname,$lname,$pos,$team,$rank,1);
+          INSERT INTO $table ($insertString,$week,gamesPlayed)
+          VALUES ('$fname','$lname','$pos','$team','$rank',1);
       ";
+      echo $load . "<br><br>";
       if (mysqli_query($con, $load)) {
         echo "$fname $lname record successfully added into players table.<br><br>";
       }

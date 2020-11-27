@@ -1,6 +1,5 @@
 Players
-Week Number
-fname,lname,position,team,rank
-'tom','brady','QB','patriots','1'
-'tom','brady','QB','patriots','1'
-'tom','brady','QB','patriots','1'
+02
+fname, lname, posID, teamID, rank
+tom brady QB NE 1
+fuck shit QB NE 1
