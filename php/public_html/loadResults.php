@@ -8,8 +8,8 @@ require 'init.php';
 // Formatted .txt files to be loaded into database.
 // First line contains table name, second line contains the PHP insert string
 $files = array(
-  "/../txt/exampledatafile1.txt",
-  "/../txt/exampledatafile2.txt"
+  "exampledatafile1.txt",
+  "exampledatafile2.txt"
 );
 
 
@@ -37,13 +37,19 @@ for ($i = 0; $i < sizeof($files); $i++) {
     // Place data fields into variables
     sscanf($values,"'%s','%s','%s','%s','%u'",$fname,$lname,$pos,$team,$rank);
     // String to check if player with matching first and last name exists
+    echo "Values string:".$values."<br>";
+    echo "fname string:".$fname."<br>";
+    echo "lname string:".$lname."<br>";
+    echo "pos string:".$pos."<br>";
+    echo "team string:".$team."<br>";
+    echo "rank string".$rank."<br>";
     $existingPlayerCheck = "
       SELECT playerID
       FROM $table
       WHERE fname = '$fname' AND lname = '$lname';
     ";
     // Player data string
-    $player = mysqli_fetch_assoc(mysqli_query($con, $existingPlayerCheck))
+    $player = mysqli_fetch_assoc(mysqli_query($con, $existingPlayerCheck)) or die(mysqli_error($con));
     $playerID = $player["playerID"];
 
     // Player already exists, update information

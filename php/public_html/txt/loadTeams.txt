@@ -1,5 +1,5 @@
 Teams
-teamName,city,wins,losses,ties,confr,divsn
+teamID,teamName,city,wins,losses,ties,confr,divsn
 'SEA','Seahawks','Seattle','5','1','0','NFC','West'
 'ARI','Cardinals','Arizona','5','2','0','NFC','West'
 'STL','Rams','Los Angeles','5','2','0','NFC','West'
