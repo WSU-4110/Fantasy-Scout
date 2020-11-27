@@ -35,20 +35,23 @@ for ($i = 0; $i < sizeof($files); $i++) {
     $values = fgets($file);
 
     // Place data fields into variables
-    sscanf($values,"'%s','%s','%s','%s','%u'",$fname,$lname,$pos,$team,$rank);
-    // String to check if player with matching first and last name exists
+    sscanf($values,"%s %s %s %s %u",$fname,$lname,$pos,$team,$rank);
     $existingPlayerCheck = "
       SELECT *
       FROM $table
       WHERE fname = '$fname' AND lname = '$lname';
     ";
     // Player data string
-    $result = mysqli_query($con, $existingPlayerCheck);
-    $player = mysqli_fetch_assoc($result);
-    $playerID = $player["playerID"];
+    $playerExistsCheck = mysqli_query($con, $existingPlayerCheck);
+    if ($playerExistsCheck) {
+        $player = mysqli_fetch_array(mysqli_query($con, $existingPlayerCheck));
+    }
+    else {
+        $player = false;
+    }
 
     // Player already exists, update information
-    if ($playerID != 0) {
+    if ($player) {
       $gamesPlayed = $player["gamesPlayed"] + 1;
 
       // Calculate new average rank
@@ -74,20 +77,26 @@ for ($i = 0; $i < sizeof($files); $i++) {
         SET $week = $rank, gamesPlayed = $gamesPlayed, avgRank = $avg
         WHERE playerID = $playerID;
       ";
-      mysqli_query($con,$update);
+        if (mysqli_query($con,$update)) {
+            echo "$fname $lname record successfully updated.<br><br>";
+        }
+        else {
+            echo "ERROR! $fname $lname record UNSUCCESSFULLY updated.<br><br>";
+        }
     }
     // Player doesn't already exist in database, add new player
     else {
       // String containing SQL INSERT statement to be executed on mysql database to add new player
+      echo "<br><br>Insert String: ".$insertString."<br><br>";
       $load = "
           INSERT INTO $table ($insertString,gamesPlayed)
-          VALUES ($values,1);
+          VALUES ($fname,$lname,$pos,$team,$rank,1);
       ";
       if (mysqli_query($con, $load)) {
-        echo "Team loaded successfully into fsdb<br><br>";
+        echo "$fname $lname record successfully added into players table.<br><br>";
       }
       else {
-        echo "Team load FAILURE!:<br>" . mysqli_error($con) . "<br><br>";
+        echo "$fname $lname record UNSUCCESSFULLY added into players table.<br>ERROR: ".mysqli_error($con)."<br><br>";
       }
     }
   }
