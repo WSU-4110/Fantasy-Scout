@@ -44,6 +44,9 @@ for ($i = 0; $i < sizeof($files); $i++) {
   while (!feof($file)) {
     // Values to be inserted into database
     $values = fgets($file);
+    // .txt files may contain lines of whitespace at the end which will result in previous line being added multiple times.
+    // If line of whitespace is detected, move to next file or end loop.
+    if ($values == "") { continue; }
     $k += 1;
     echo "Line number: $k";
 
@@ -64,55 +67,55 @@ for ($i = 0; $i < sizeof($files); $i++) {
         echo "Player = false<br><br>";
     }
 
-    // Player already exists, update information
-    if ($player) {
-      $gamesPlayed = $player["gamesPlayed"] + 1;
-
-      // Calculate new average rank
-      $avg = 0;
-      // Get ranks from all existing weeks
-      for ($j = 1; $j < $gamesPlayed; $j++) {
-        // If week is single digit, add 0 in front to go along with formatting
-        // of field naming conventions in database
-        if ($j < 10) {
-          $avg += $player["week0".$j."Rank"];
-        }
-        // If double digit, no additional formatting is needed
-        else {
-          $avg += $player["week".$j."Rank"];
-        }
-      }
-      // Finish average rank calculation
-      $avg += $rank;
-      $avg /= $gamesPlayed;
-
-      $update = "
-        UPDATE Players
-        SET $week = $rank, gamesPlayed = $gamesPlayed, avgRank = $avg
-        WHERE playerID = ".$player['playerID'].";
-      ";
-        if (mysqli_query($con,$update)) {
-            echo "$fname $lname record successfully updated.<br><br>";
+    // Player doesn't already exist in database, add new player
+    if (!$player) {
+        // String containing SQL INSERT statement to be executed on mysql database to add new player
+        echo "<br><br>Insert String: ".$insertString."<br><br>";
+        $load = "
+            INSERT INTO $table ($insertString,$week,gamesPlayed,avgRank)
+            VALUES ('$fname','$lname','$pos','$team','$rank',1,'$rank');
+        ";
+        echo $load . "<br><br>";
+        if (mysqli_query($con, $load)) {
+          echo "$fname $lname record successfully added into players table.<br><br>";
         }
         else {
-            echo "ERROR! $fname $lname record UNSUCCESSFULLY updated.<br><br>";
+          echo "$fname $lname record UNSUCCESSFULLY added into players table.<br>ERROR: ".mysqli_error($con)."<br><br>";
         }
     }
-    // Player doesn't already exist in database, add new player
+    // Player already exists, update information
     else {
-      // String containing SQL INSERT statement to be executed on mysql database to add new player
-      echo "<br><br>Insert String: ".$insertString."<br><br>";
-      $load = "
-          INSERT INTO $table ($insertString,$week,gamesPlayed,avgRank)
-          VALUES ('$fname','$lname','$pos','$team','$rank',1,'$rank');
-      ";
-      echo $load . "<br><br>";
-      if (mysqli_query($con, $load)) {
-        echo "$fname $lname record successfully added into players table.<br><br>";
-      }
-      else {
-        echo "$fname $lname record UNSUCCESSFULLY added into players table.<br>ERROR: ".mysqli_error($con)."<br><br>";
-      }
+        $gamesPlayed = $player["gamesPlayed"] + 1;
+
+        // Calculate new average rank
+        $avg = 0;
+        // Get ranks from all existing weeks
+        for ($j = 1; $j < $gamesPlayed; $j++) {
+          // If week is single digit, add 0 in front to go along with formatting
+          // of field naming conventions in database
+          if ($j < 10) {
+            $avg += $player["week0".$j."Rank"];
+          }
+          // If double digit, no additional formatting is needed
+          else {
+            $avg += $player["week".$j."Rank"];
+          }
+        }
+        // Finish average rank calculation
+        $avg += $rank;
+        $avg /= $gamesPlayed;
+
+        $update = "
+          UPDATE Players
+          SET $week = $rank, gamesPlayed = $gamesPlayed, avgRank = $avg
+          WHERE playerID = ".$player['playerID'].";
+        ";
+          if (mysqli_query($con,$update)) {
+              echo "$fname $lname record successfully updated.<br><br>";
+          }
+          else {
+              echo "ERROR! $fname $lname record UNSUCCESSFULLY updated.<br><br>";
+          }
     }
   }
   fclose($file);
