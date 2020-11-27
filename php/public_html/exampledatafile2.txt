@@ -1,5 +1,0 @@
-Players
-02
-fname, lname, posID, teamID, rank
-tom brady QB NE 1
-fuck shit QB NE 1

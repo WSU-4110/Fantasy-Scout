@@ -37,13 +37,25 @@ for ($i = 0; $i < sizeof($files); $i++) {
     $values = fgets($file);
 
     // Place data fields into variables
+<<<<<<< HEAD
     sscanf($values,"%s %s %s %s %u",$fname,$lname,$pos,$team,$rank);
+=======
+    sscanf($values,"'%s','%s','%s','%s','%u'",$fname,$lname,$pos,$team,$rank);
+    // String to check if player with matching first and last name exists
+    echo "Values string:".$values."<br>";
+    echo "fname string:".$fname."<br>";
+    echo "lname string:".$lname."<br>";
+    echo "pos string:".$pos."<br>";
+    echo "team string:".$team."<br>";
+    echo "rank string".$rank."<br>";
+>>>>>>> fd9022ef8224c3583aaf3e325ad5e4df839eb384
     $existingPlayerCheck = "
       SELECT *
       FROM $table
       WHERE fname = '$fname' AND lname = '$lname';
     ";
     // Player data string
+<<<<<<< HEAD
     $playerExistsCheck = mysqli_query($con, $existingPlayerCheck);
     if ($playerExistsCheck) {
         $player = mysqli_fetch_array(mysqli_query($con, $existingPlayerCheck));
@@ -52,6 +64,10 @@ for ($i = 0; $i < sizeof($files); $i++) {
         $player = false;
         echo "Player = false<br><br>";
     }
+=======
+    $player = mysqli_fetch_assoc(mysqli_query($con, $existingPlayerCheck)) or die(mysqli_error($con));
+    $playerID = $player["playerID"];
+>>>>>>> fd9022ef8224c3583aaf3e325ad5e4df839eb384
 
     // Player already exists, update information
     if ($player) {
