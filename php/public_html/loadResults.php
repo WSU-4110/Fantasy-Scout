@@ -17,12 +17,17 @@ $files = array(
 // For each file to be loaded, load the formatted .txt file into the database
 for ($i = 0; $i < sizeof($files); $i++) {
   // Open the current file
+  $k = 0;
   $file = fopen($files[$i], "r");
 
   // First line is the table name
   $table = fgets($file);
+  $k += 1;
+  echo "Line number: $k";
   // Second line contains week Number
   $weekNum = fgets($file);
+  $k += 1;
+  echo "Line number: $k";
   // fgets() adds 1 extra whitespace to end of weekNum which breaks formatting.
   // split string into array and ensure that weekNum contains only 2 digits with no whitespace
   $weekNum = str_split($weekNum);
@@ -30,6 +35,8 @@ for ($i = 0; $i < sizeof($files); $i++) {
   $week = "week".$weekNum."Rank";
   // Third line contains the data fields in the database that are being inserted into
   $insertString = fgets($file);
+  $k += 1;
+  echo "Line number: $k";
 
 
 
@@ -37,6 +44,8 @@ for ($i = 0; $i < sizeof($files); $i++) {
   while (!feof($file)) {
     // Values to be inserted into database
     $values = fgets($file);
+    $k += 1;
+    echo "Line number: $k";
 
     // Place data fields into variables
     sscanf($values,"%s %s %s %s %u",$fname,$lname,$pos,$team,$rank);
