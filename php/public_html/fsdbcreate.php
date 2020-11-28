@@ -175,7 +175,7 @@ if (mysqli_query($con, $predTbl)) {
   echo "Predictions Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';
 }
 
-
+require 'load.php';
 
 // Close connection
 mysqli_close($con);
