@@ -1,8 +1,8 @@
 Predictions
 01
 orgName, playerFname, playerLname, position, analystFname, analystLname
-ESPN tom brady QB 0 0
+ESPN tom brady QB none none
 NFL fuck shit RB John Smith
 
 // For this one, if the prediction is for an analyst include their
-//first and last name as formatted. If not, just have it put 0 instead for the fname and lname
+//first and last name as formatted. If not, just have it put none instead for the fname and lname
