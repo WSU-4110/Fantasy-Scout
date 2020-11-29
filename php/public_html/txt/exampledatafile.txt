@@ -1,6 +1,0 @@
-Players
-Week Number
-fname,lname,position,team,rank
-'tom','brady','QB','patriots','1'
-'tom','brady','QB','patriots','1'
-'tom','brady','QB','patriots','1'
