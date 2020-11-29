@@ -40,6 +40,8 @@ for ($i = 0; $i < sizeof($files); $i++) {
     // .txt files may contain lines of whitespace at the end which will result in previous line being added multiple times.
     // If line of whitespace is detected, move to next file or end loop.
     if ($values == "") { continue; }
+    echo $files[$i]."<br>";
+    echo $values."<br>";
 
     // Place data fields into variables
     sscanf($values,"%s %s %s %s %u",$fname,$lname,$pos,$team,$rank);
@@ -61,8 +63,9 @@ for ($i = 0; $i < sizeof($files); $i++) {
     // Player doesn't already exist in database, add new player
     if (!$player) {
         // String containing SQL INSERT statement to be executed on mysql database to add new player
+        echo $insertString."<br>";
         $load = "
-            INSERT INTO $table ($insertString,$week,gamesPlayed,avgRank)
+            INSERT INTO $table (fname,lname,posID,teamID,$week,gamesPlayed,avgRank)
             VALUES ('$fname','$lname','$pos','$team','$rank',1,'$rank');
         ";
         if (mysqli_query($con, $load)) {

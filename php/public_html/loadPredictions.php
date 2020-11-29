@@ -51,7 +51,7 @@ for ($i = 0; $i < sizeof($files); $i++) {
     $existingPlayerCheck = "
       SELECT *
       FROM Players
-      WHERE fname = '$fname' AND lname = '$lname';
+      WHERE fname = '$Pfname' AND lname = '$Plname';
     ";
     // CHECK TO SEE IF PLAYER ALREADY EXISTS. IF NOT, ADD THEM
     $playerExistsCheck = mysqli_query($con, $existingPlayerCheck);
