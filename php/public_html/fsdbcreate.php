@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS Week (
  // Make query to create Teams Table
 $teamsTbl = '
 CREATE TABLE IF NOT EXISTS Teams(
-  teamID CHAR(3) NOT NULL PRIMARY KEY,
+  teamID VARCHAR(3) NOT NULL PRIMARY KEY,
   teamName VARCHAR(25),
   city VARCHAR(30),
   wins INT(2) UNSIGNED,
@@ -50,6 +50,25 @@ CREATE TABLE IF NOT EXISTS Teams(
   divsn VARCHAR(20)
 );';
 
+ // Make query to create organizations table
+ $orgsTbl = '
+ CREATE TABLE IF NOT EXISTS Organizations (
+   orgID INT(3) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   name VARCHAR(40) NOT NULL UNIQUE,
+   website VARCHAR(50) NOT NULL UNIQUE
+ );';
+
+// Make query to create Analysts TABLE
+$anlTbl = '
+CREATE TABLE IF NOT EXISTS Analysts (
+   analystID INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+   fname VARCHAR(35),
+   lname VARCHAR(35),
+   orgID INT(3) UNSIGNED NOT NULL,
+   FOREIGN KEY (orgID) REFERENCES Organizations(orgID),
+   ratingN INT(4) UNSIGNED,
+   ratingC VARCHAR(2)
+);';
 // Make query to create players table
 $playersTbl = '
 CREATE TABLE IF NOT EXISTS Players (
@@ -58,7 +77,7 @@ CREATE TABLE IF NOT EXISTS Players (
   lname VARCHAR(35),
   posID VARCHAR(4) NOT NULL,
   FOREIGN KEY (posID) REFERENCES Positions(posID),
-  teamID CHAR(3) NOT NULL,
+  teamID VARCHAR(3) NOT NULL,
   FOREIGN KEY (teamID) REFERENCES Teams(teamID),
   avgRank DOUBLE(5,2) UNSIGNED,
   year INT(4) UNSIGNED,
@@ -85,26 +104,6 @@ CREATE TABLE IF NOT EXISTS Players (
   week20Rank INT(2) UNSIGNED
  );';
 
- // Make query to create organizations table
- $orgsTbl = '
- CREATE TABLE IF NOT EXISTS Organizations (
-   orgID INT(3) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-   name VARCHAR(40) NOT NULL UNIQUE,
-   website VARCHAR(50) NOT NULL UNIQUE
- );';
-
-// Make query to create Analysts TABLE
-$anlTbl = '
-CREATE TABLE IF NOT EXISTS Analysts (
-   analystID INT(4) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-   fname VARCHAR(35),
-   lname VARCHAR(35),
-   orgID INT(3) UNSIGNED NOT NULL,
-   FOREIGN KEY (orgID) REFERENCES Organizations(orgID),
-   ratingN INT(4) UNSIGNED,
-   ratingC VARCHAR(2)
-);';
-
 // Make query to create Predictions TABLE
 $predTbl = '
 CREATE TABLE IF NOT EXISTS Predictions (
@@ -119,42 +118,40 @@ CREATE TABLE IF NOT EXISTS Predictions (
    FOREIGN KEY (posID) REFERENCES Positions(posID),
    orgID INT(3) UNSIGNED NOT NULL,
    FOREIGN KEY (orgID) REFERENCES Organizations(orgID),
+   teamID VARCHAR(3) NOT NULL,
+   FOREIGN KEY (teamID) REFERENCES Teams(teamID),
    projRank INT(2) UNSIGNED NOT NULL,
    rank INT(2) UNSIGNED,
    diff INT(2) UNSIGNED
 );';
 
+
+
 // EXECUTE CREATE QUERIES
 
-// Position Table Creation
- if (mysqli_query($con, $posTbl)) {
-   echo "Positions Table Created Successfully<br><br>";
- } else {
-   echo "Positions Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';;
- }
-// Week Table Creation
-if (mysqli_query($con, $weekTbl)){
-  echo "Week Table Created Successfully<br><br>";
-} else {
-  echo "Week Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';;
-}
 // Account Table Creation
 if (mysqli_query($con, $acctTbl)){
   echo "Accounts Table Created Successfully<br><br>";
 } else {
   echo "Accounts Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';;
 }
+// Week Table Creation
+if (mysqli_query($con, $weekTbl)){
+  echo "Week Table Created Successfully<br><br>";
+} else {
+  echo "Week Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';;
+}
+// Position Table Creation
+ if (mysqli_query($con, $posTbl)) {
+   echo "Positions Table Created Successfully<br><br>";
+ } else {
+   echo "Positions Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';;
+ }
 // Teams Table Creation
 if (mysqli_query($con, $teamsTbl)){
   echo "Teams Table Created Successfully<br><br>";
 } else {
   echo "Teams Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';;
-}
-// Players Table Creation
-if (mysqli_query($con, $playersTbl )){
-  echo "Players Table Created Successfully<br><br>";
-} else {
-  echo "Players Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';
 }
 // Organizations table creation
 if (mysqli_query($con, $orgsTbl)){
@@ -167,6 +164,12 @@ if (mysqli_query($con, $anlTbl)) {
   echo "Analyst Table Created Successfully<br><br>";
 } else {
   echo "Analyst Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';
+}
+// Players Table Creation
+if (mysqli_query($con, $playersTbl )){
+  echo "Players Table Created Successfully<br><br>";
+} else {
+  echo "Players Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';
 }
 // Position Table Creation
 if (mysqli_query($con, $predTbl)) {
