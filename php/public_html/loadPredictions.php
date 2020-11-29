@@ -26,8 +26,13 @@ for ($i = 0; $i < sizeof($files); $i++) {
   // fgets() adds 1 extra whitespace to end of weekNum which breaks formatting.
   // split string into array and ensure that weekNum contains only 2 digits with no whitespace
   $weekNum = str_split($weekNum);
-  $weekNum = "$weekNum[0]"."$weekNum[1]";
-  $week = "week".$weekNum."Rank";
+  if ($weekNum < 10) {
+      // If weeknum is less than 10, format it to 1 digit
+      $weekNum = "$weekNum[1]";
+  }
+  else {
+      $weekNum = "$weekNum[0]"."$weekNum[1]";
+  }
   // Third line contains the data fields in the database that are being inserted into
   $insertString = fgets($file);
 
@@ -42,7 +47,7 @@ for ($i = 0; $i < sizeof($files); $i++) {
     if ($values == "") { continue; }
 
     // Place data fields into variables
-    sscanf($values,"%s %s %s %s %s %s %s %s",$org,$Pfname,$Plname,$rank,$pos,$team,$analyFname, $analyLname);
+    sscanf($values,"%s %s %s %s %s %s %s %s",$org,$Pfname,$Plname,$rank,$pos,$team,$analyFname,$analyLname);
     $existingPlayerCheck = "
       SELECT *
       FROM Players
@@ -50,36 +55,60 @@ for ($i = 0; $i < sizeof($files); $i++) {
     ";
     // CHECK TO SEE IF PLAYER ALREADY EXISTS. IF NOT, ADD THEM
     $playerExistsCheck = mysqli_query($con, $existingPlayerCheck);
+    // Player exists
     if ($playerExistsCheck) {
         $player = mysqli_fetch_array($playerExistsCheck);
     }
+    // Player doesn't exist
     else {
         $addPlayer = "
           INSERT INTO Players (fname, lname, position, team, gamesPlayed)
-          VALUES ('$Pfname','$Plname','$pos','$team','0')
+          VALUES ('$Pfname','$Plname','$pos','$team','0');
         ";
         $player = mysqli_fetch_array(mysqli_query($con,$addPlayer));
     }
+    // Get the player's primary key
     $playerID = $player["playerID"];
+
     // GET ORGANIZATION PARIMARY KEY
     $getOrgId = "
       SELECT *
       FROM Organizations
-      WHERE name = '$org'
+      WHERE name = '$org';
     ";
     $orgID = mysqli_fetch_array(mysqli_query($con,$getOrgId));
     $orgID = $orgID["orgID"];
+
     // IF ANALYST IS PROVIDED, GET ANALYST ID
     if ($analyFname != 'none') {
       $getAnalyId = "
         SELECT *
         FROM Analysts
-        WHERE fname = '$analyFname' AND lname = '$analyLname'
+        WHERE fname = '$analyFname' AND lname = '$analyLname';
       ";
       $analyID = mysqli_fetch_array(mysqli_query($con,$getAnalyId));
       $analyID = $analyID["analystID"];
     }
 
+    // GET WEEK PRIMARY KEY
+    $getWeekID = "
+        SELECT *
+        FROM Week
+        WHERE weekNum = '$weekNum';
+    ";
+    $weekID = mysqli_fetch_array(mysqli_query($con,$getWeekID));
+    $weekID = $weekID["weekID"];
+
+
+
+    // BUILD PREDICTION AND INSERT INTO database
+    if ($analyFname == 'none') {
+        // If analyst is not provided, insert without analystID
+        $Prediction = "
+            INSERT INTO $table (weekID, playerID, posID, orgID, teamID, projRank)
+            VALUES ('$weekID', '$playerID', '$pos', '$orgID', '$team', '$rank');
+        ";
+    }
 
   }
   fclose($file);
