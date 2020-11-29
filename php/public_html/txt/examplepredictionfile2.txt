@@ -2,4 +2,4 @@ Predictions
 02
 orgName, playerFname, playerLname, predictedrank, position, team, analystFname, analystLname
 ESPN tom brady 3 QB NE none none
-NFL fuck shit 5 RB NE none none
+NFL fuck shit 5 RB NE John Smith

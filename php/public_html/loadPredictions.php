@@ -90,9 +90,24 @@ for ($i = 0; $i < sizeof($files); $i++) {
         FROM Analysts
         WHERE fname = '$analyFname' AND lname = '$analyLname';
       ";
+      // Get analyst
       $analyID = mysqli_fetch_array(mysqli_query($con,$getAnalyId));
-      $analyID = $analyID["analystID"];
-      echo "AnalystID: $analyID successfully retrieved<br><br>";
+      if ($analyID) {
+          // If analyst exists, get the analyst ID
+          $analyID = $analyID["analystID"];
+          echo "AnalystID: $analyID successfully retrieved<br><br>";
+      }
+      else {
+          // If analyst doesn't exist, add new analyst with relevant data
+          $addAnalyst = "
+            INSERT INTO Analysts (fname,lname,orgID)
+            VALUES ('$analyFname','$analyLname','$orgID');
+          ";
+          mysqli_query($con,$addAnalyst);
+          $analyID = mysqli_fetch_array(mysqli_query($con,$getAnalyId));
+          $analyID = $analyID["analystID"];
+          echo "AnalystID: $analyID successfully created and retrieved<br><br>";
+      }
     }
     else { echo "No analyst for this prediction<br><br>"; }
 
