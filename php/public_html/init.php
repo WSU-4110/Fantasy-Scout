@@ -1,9 +1,9 @@
 <?php
    // Initialize connection variables
    $server = "localhost";
-   $user = "id15075449_fsmod";
-   $pass = "I&/*bDN5P^JLB~RF";
-   $db = "id15075449_fsdb";
+   $user = "id15544002_fsmod";
+   $pass = "Fantasyscout4110!";
+   $db = "id15544002_fsdb";
 
    //create connection
    $con = mysqli_connect($server,$user,$pass,$db);
