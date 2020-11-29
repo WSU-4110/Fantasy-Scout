@@ -6,7 +6,7 @@ require 'init.php';
 
 
 // Week# is passed into script
-$weekNum = $_POST["WeekNum"];
+$weekNum = 1;
 // From Week#, get WeekID
 $getWeek = "
     SELECT *
@@ -59,7 +59,7 @@ while ($row = mysqli_fetch_array($Predictions)) {
         echo "Prediction for week $weekNum successfully updated<br><br>";
     }
     else {
-        echo "Prediction for week $weekNum UNSUCCESSFULLY updated<br><br>"; 
+        echo "Prediction for week $weekNum UNSUCCESSFULLY updated<br><br>";
     }
 
 }

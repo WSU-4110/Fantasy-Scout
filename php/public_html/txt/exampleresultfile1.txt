@@ -1,5 +1,5 @@
 Players
 01
-fname, lname, position, team, rank
+fname, lname, posID, teamID, rank
 tom brady QB NE 1
 fuck shit QB NE 1
