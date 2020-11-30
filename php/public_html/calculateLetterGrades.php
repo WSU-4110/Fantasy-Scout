@@ -15,7 +15,9 @@ $getAnalysts = "
     ORDER BY ratingN ASC;
 ";
 $Organizations = mysqli_query($con,$getOrgs);
+echo "<br>".mysqli_error($con);
 $Analysts = mysqli_query($con,$getAnalysts);
+echo "<br>".mysqli_error($con);
 
 // Loop through all Organizations
 while ($org = mysqli_fetch_array($Organizations)) {
