@@ -1,7 +1,7 @@
 <?php
 
-$require 'init.php';
-$require 'calculateGradeScale.php';
+require 'init.php';
+require 'calculateGradeScale.php';
 
 // Get all organizations and analysts
 $getOrgs = "

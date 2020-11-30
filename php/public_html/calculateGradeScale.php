@@ -1,6 +1,6 @@
 <?php
 
-$require 'init.php';
+require 'init.php';
 
 
 // Get all all organizations and all analysts.
@@ -139,6 +139,22 @@ else {
 // Calculate difference between next best and next worst score
 $range = $nextworstScore - $nextbestScore;
 $grade = $range/5;
+$Aceil = $nextbestScore;
+    $A = $Aceil + ($grade/3);
+    $Aminus = $A + ($grade/3);
+$Bceil = $Aceil + $grade;
+    $B = $Bceil + ($grade/3);
+    $Bminus = $B + ($grade/3);
+$Cceil = $Bceil + $grade;
+    $C = $Cceil + ($grade/3);
+    $Cminus = $ + ($grade/3);
+$Dceil = $Cceil + $grade;
+    $D = $Dceil + ($grade/3);
+    $Dminus = $D + ($grade/3);
+$Eceil = $Dceil + $grade;
+    $E = $Eceil + ($grade/3);
+    $Eminus = $E + ($grade/3);
+
 
 
 // ***CLOSE CONNECTION WITH SERVER***
