@@ -23,7 +23,7 @@ while ($org = mysqli_fetch_array($Organizations)) {
     $score = $org["ratingN"];
     $orgID = $org["orgID"];
     // If the score is less than the nextbestscore or greater than the nextworstscore, they have already been assigned an S or F, so skip
-    if ($score < $nextbestScore OR $score > $nextworstScore) {continue};
+    if ($score < $nextbestScore OR $score > $nextworstScore) {continue}
     // GRADE A
     if ($score >= $Aceil AND $score < $Bceil ) {
         // A+
