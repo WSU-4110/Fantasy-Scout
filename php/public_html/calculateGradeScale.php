@@ -14,19 +14,31 @@ $getAnalysts = "
     FROM Analysts
     ORDER BY ratingN ASC;
 ";
+$getWorstOrgs = "
+    SELECT *
+    FROM Organizations
+    ORDER BY ratingN DESC;
+";
+$getWorstAnalysts = "
+    SELECT *
+    FROM Analysts
+    ORDER BY ratingN DESC;
+";
 $Organizations = mysqli_query($con,$getOrgs);
 $Analysts = mysqli_query($con,$getAnalysts);
+$worstOrgs = mysqli_query($con,$getWorstOrgs);
+$worstAnalysts = mysqli_query($con,$getWorstAnalysts);
 
 // FIND BEST AND WORST SCORES
 // Find best/worst organization/analyst
 $bestOrg = mysqli_fetch_array($Organizations);
-while ($row = mysqli_fetch_array($Organizations)) {
-    $worstOrg = mysqli_fetch_array($Organizations);
-}
+$nextbestOrg = mysqli_fetch_array($Organizations);
+$worstOrg = mysqli_fetch_array($worstOrgs);
+$nextworstOrg = mysqli_fetch_array($worstOrgs);
 $bestAnalyst = mysqli_fetch_array($Analysts);
-while ($row = mysqli_fetch_array($Analysts)) {
-    $worstAnalyst = mysqli_fetch_array($Analysts);
-}
+$nextbestAnalyst = mysqli_fetch_array($Analysts);
+$worstAnalyst = mysqli_fetch_array($worstAnalysts);
+$nextworstAnalyst = mysqli_fetch_array($worstAnalysts);
 
 // From the best/worst org/analyst, determine which is the best and which is the worst
 // Find best
@@ -44,7 +56,7 @@ elseif ($bestOrg["ratingN"] < $bestAnalyst["ratingN"]) {
     $bestScore = $bestOrg["ratingN"];
     $bestTable = "Organizations";
     $bestID = $best["orgID"];
-    $bestIDtype = "orgID"
+    $bestIDtype = "orgID";
 }
 else {
     // The scores are the same
@@ -95,11 +107,6 @@ else {
 }
 
 // calculate A-E grading scale, and within those scales calculate +- scales
-// Find next best and next worst score
-$nextbestOrg = $Organizations[1];
-$nextworstOrg = $Organizations[sizeof($Organizations)-2];
-$nextbestAnalyst = $Analysts[1];
-$nextworstAnalyst = $Analysts[sizeof($Analysts)-2];
 if ($nextbestOrg["ratingN"] > $nextbestAnalyst["ratingN"]) {
     // Next best analyst has best score
     $nextbest = $nextbestAnalyst;
