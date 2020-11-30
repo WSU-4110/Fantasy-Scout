@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS Teams(
    orgID INT(3) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
    name VARCHAR(40) NOT NULL UNIQUE,
    website VARCHAR(50) NOT NULL UNIQUE,
-   ratingN INT(4) UNSIGNED,
+   ratingN DOUBLE(4, 3) UNSIGNED,
    ratingC VARCHAR(2)
  );';
 
@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS Analysts (
    lname VARCHAR(35),
    orgID INT(3) UNSIGNED NOT NULL,
    FOREIGN KEY (orgID) REFERENCES Organizations(orgID),
-   ratingN INT(4) UNSIGNED,
+   ratingN DOUBLE(4, 3) UNSIGNED,
    ratingC VARCHAR(2)
 );';
 // Make query to create players table

@@ -34,7 +34,7 @@ while ($analyst = mysqli_fetch_array($analysts)) {
     // Divide summation of diff squares by n-1 then take square root, as per standard deviation equation.
     // Only do this if n > 1, since division by 0 is undefined. do not assign accuracy ranking for organizations with only 1 prediction.
     if ($n > 1) {
-        $diffSum /= ($n-1)
+        $diffSum /= ($n-1);
         $stdDev = sqrt($diffSum);
     }
     // Assign organization numeric ranking equal to that organization's standard deviation ($stdDev)
@@ -83,7 +83,7 @@ while ($analyst = mysqli_fetch_array($analysts)) {
     // Divide summation of diff squares by n-1 then take square root, as per standard deviation equation.
     // Only do this if n > 1, since division by 0 is undefined. do not assign accuracy ranking for organizations with only 1 prediction.
     if ($n > 1) {
-        $diffSum /= ($n-1)
+        $diffSum /= ($n-1);
         $stdDev = sqrt($diffSum);
     }
     // Assign organization numeric ranking equal to that organization's standard deviation ($stdDev)
