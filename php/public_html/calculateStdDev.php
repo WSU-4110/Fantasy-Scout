@@ -74,6 +74,8 @@ while ($analyst = mysqli_fetch_array($analysts)) {
     $diffSum = 0;
     // number of diffs summed
     $n = 0;
+    $diff = 0;
+    $stdDev = 0;
     while ($pred = mysqli_fetch_array($Predictions)) {
         $diff = $pred["diff"];
         // Raise diff to power of 2 as per standard deviation equation
