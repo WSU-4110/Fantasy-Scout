@@ -76,6 +76,18 @@ $F = "
     SET ratingC = 'F'
     WHERE $worstIDtype = $worstID;
 ";
+if (mysqli_query($con,$S)) {
+    echo "Best score assigned to $bestIDtype: $bestID<br><br>";
+}
+else {
+    echo "Best score NOT assigned to $bestIDtype: $bestID! Error: ".mysqli_error()."<br><br>";
+}
+if (mysqli_query($con,$F)) {
+    echo "Worst score assigned to $bestIDtype: $bestID<br><br>";
+}
+else {
+    echo "Worst score NOT assigned to $bestIDtype: $bestID! Error: ".mysqli_error()."<br><br>";
+}
 
 // calculate A-E grading scale, and within those scales calculate +- scales
 
