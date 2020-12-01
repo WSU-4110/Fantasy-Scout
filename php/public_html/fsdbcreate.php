@@ -212,11 +212,17 @@ if (mysqli_query($con, $predTbl)) {
 } else {
   echo "Predictions Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';
 }
-// Position Table Creation
+// Global Table Creation
 if (mysqli_query($con, $globalTbl)) {
   echo "Global Table Created Successfully<br><br>";
 } else {
   echo "Global Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';
+}
+// Bookmarks Table Creation
+if (mysqli_query($con, $bookmarkTbl)) {
+  echo "Bookmarks Table Created Successfully<br><br>";
+} else {
+  echo "Bookmarks Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';
 }
 
 require 'load.php';
