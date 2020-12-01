@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS Week (
    username VARCHAR(20) NOT NULL,
    password VARCHAR(20) NOT NULL,
    email VARCHAR(30) NOT NULL,
+   bio VARCHAR(500),
    fname VARCHAR(20),
    lname VARCHAR(25),
    regDate INT(8) NOT NULL,
@@ -56,7 +57,7 @@ CREATE TABLE IF NOT EXISTS Teams(
    orgID INT(3) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
    name VARCHAR(40) NOT NULL UNIQUE,
    website VARCHAR(50) NOT NULL UNIQUE,
-   ratingN DOUBLE(4, 3) UNSIGNED,
+   ratingN DOUBLE(6, 3) UNSIGNED,
    ratingC VARCHAR(2)
  );';
 
@@ -68,9 +69,21 @@ CREATE TABLE IF NOT EXISTS Analysts (
    lname VARCHAR(35),
    orgID INT(3) UNSIGNED NOT NULL,
    FOREIGN KEY (orgID) REFERENCES Organizations(orgID),
-   ratingN DOUBLE(4, 3) UNSIGNED,
+   ratingN DOUBLE(6, 3) UNSIGNED,
    ratingC VARCHAR(2)
 );';
+
+$bookmarkTbl = '
+CREATE TABLE IF NOT EXISTS Bookmarks (
+    bkmkID INT(6) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    acctID INT (5) UNSIGNED NOT NULL,
+    FOREIGN KEY (acctID) REFERENCES Accounts(acctID),
+    orgID INT(3) UNSIGNED,
+    FOREIGN KEY (orgID) REFERENCES Organizations(orgID),
+    analystID INT(4) UNSIGNED,
+    FOREIGN KEY (analystID) REFERENCES Analysts(analystID)
+);';
+
 // Make query to create players table
 $playersTbl = '
 CREATE TABLE IF NOT EXISTS Players (
@@ -127,7 +140,27 @@ CREATE TABLE IF NOT EXISTS Predictions (
    diff INT(2) UNSIGNED
 );';
 
-
+// Make query to create global table
+$globalTbl = '
+CREATE TABLE IF NOT EXISTS Predictions (
+    currentWeek INT(5) UNSIGNED NOT NULL,
+    FOREIGN KEY (currentWeek) REFERENCES Week(weekID),
+    Aceil DOUBLE(6, 3) UNSIGNED,
+    A DOUBLE(6, 3) UNSIGNED,
+    Aminus  DOUBLE(6, 3) UNSIGNED,
+    Bceil DOUBLE(6, 3) UNSIGNED,
+    B DOUBLE(6, 3) UNSIGNED,
+    Bminus DOUBLE(6, 3) UNSIGNED,
+    Cceil DOUBLE(6, 3) UNSIGNED,
+    C DOUBLE(6, 3) UNSIGNED,
+    Cminus DOUBLE(6, 3) UNSIGNED,
+    Dceil DOUBLE(6, 3) UNSIGNED,
+    D DOUBLE(6, 3) UNSIGNED,
+    Dminus DOUBLE(6, 3) UNSIGNED,
+    Eceil DOUBLE(6, 3) UNSIGNED,
+    E DOUBLE(6, 3) UNSIGNED,
+    Eminus DOUBLE(6, 3) UNSIGNED
+);';
 
 // EXECUTE CREATE QUERIES
 
@@ -178,6 +211,12 @@ if (mysqli_query($con, $predTbl)) {
   echo "Predictions Table Created Successfully<br><br>";
 } else {
   echo "Predictions Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';
+}
+// Position Table Creation
+if (mysqli_query($con, $globalTbl)) {
+  echo "Global Table Created Successfully<br><br>";
+} else {
+  echo "Global Table Creation FAILED!:<br>" . mysqli_error($con) . '<br><br>';
 }
 
 require 'load.php';
