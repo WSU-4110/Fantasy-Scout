@@ -28,44 +28,176 @@
 <div class="columnLeft">
 <h2>Weekly Recap</h2>
 <h3>Best Predictions</h3>
-<h4>Analysts X</h4>
-<p>Good Stats</p>
+<p><?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MAX(ratingN) FROM Organizations)";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo nl2br("Company: " . $row["name"]. "\nRating: " . $row["ratingN"]. "\nGrade:" . $row["ratingC"]. "<br>");
+  }
+} else {
+  echo "0 results";
+}
+mysqli_close($conn);
+?></p>
+<br>
 <h3>Worst Predictions</h3>
-<h4>Analysts Y</h4>
-<p>Bad Stats</p>
-<h3>Average</h3>
-<h4>Analysts Z</h4>
-<p>Not bad but not good stats</p>
-<h3>Analysis</h3>
-<p>Weekly Recap</p>
+<p><?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MIN(ratingN) FROM Organizations)";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo nl2br("Company: " . $row["name"]. "\nRating: " . $row["ratingN"]. "\nGrade:" . $row["ratingC"]. "<br>");
+  }
+} else {
+  echo "0 results";
+}
+mysqli_close($conn);
+?></p>
 </div>
 <div class="columnMiddle">
 <h2>Monthly Review</h2>
 <h3>Best Predictions</h3>
-<h4>Analysts X</h4>
-<p>Good Stats</p>
+<p><?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MAX(ratingN) FROM Organizations)";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo nl2br("Company: " . $row["name"]. "\nRating: " . $row["ratingN"]. "\nGrade:" . $row["ratingC"]. "<br>");
+  }
+} else {
+  echo "0 results";
+}
+mysqli_close($conn);
+?></p>
+<br>
 <h3>Worst Predictions</h3>
-<h4>Analysts Y</h4>
-<p>Bad Stats</p>
-<h3>Average</h3>
-<h4>Analysts Z</h4>
-<p>Not bad but not good stats</p>
-<h3>Analysis</h3>
-<p>Monthly Recap</p>
+<p><?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MIN(ratingN) FROM Organizations)";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo nl2br("Company: " . $row["name"]. "\nRating: " . $row["ratingN"]. "\nGrade:" . $row["ratingC"]. "<br>");
+  }
+} else {
+  echo "0 results";
+}
+mysqli_close($conn);
+?></p>
 </div>
 <div class="columnRight">
 <h2>Season Reveal</h2>
 <h3>Best Predictions</h3>
-<h4>Analysts X</h4>
-<p>Good Stats</p>
+<p><?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MAX(ratingN) FROM Organizations)";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo nl2br("Company: " . $row["name"]. "\nRating: " . $row["ratingN"]. "\nGrade:" . $row["ratingC"]. "<br>");
+  }
+} else {
+  echo "0 results";
+}
+mysqli_close($conn);
+?></p>
+<br>
 <h3>Worst Predictions</h3>
-<h4>Analysts Y</h4>
-<p>Bad Stats</p>
-<h3>Average</h3>
-<h4>Analysts Z</h4>
-<p>Not bad but not good stats</p>
-<h3>Analysis</h3>
-<p>Season Recap</p>
+<p><?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MIN(ratingN) FROM Organizations)";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo nl2br("Company: " . $row["name"]. "\nRating: " . $row["ratingN"]. "\nGrade:" . $row["ratingC"]. "<br>");
+  }
+} else {
+  echo "0 results";
+}
+mysqli_close($conn);
+?></p>
 </div>
 </div>
 </main>

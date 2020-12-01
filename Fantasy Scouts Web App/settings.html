@@ -27,10 +27,64 @@
 <main>
 <h2>Your Profile</h2>
 
-<h4>Username: Harvey</h4>
+<h4>Username</h4>
+<p><?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
 
-<h4>Bio: Go Jets (don't laugh)</h4>
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
 
+$sql = "SELECT username FROM Accounts WHERE acctID = '1'";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "" . $row["username"]."<br>";
+  }
+} else {
+  echo "0 results";
+}
+mysqli_close($conn);
+?></p>
+
+<h4>Bio</h4>
+<p><?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT email FROM Accounts WHERE acctID = '1'";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "" . $row["email"]."<br>";
+  }
+} else {
+  echo "0 results";
+}
+mysqli_close($conn);
+?></p>
+<form action="editProfile.html">
+    <input type="submit" value="Edit Profile" />
+</form>
 <h2>Your Settings</h2>
 
 <!-- Dark Mode -->
@@ -41,12 +95,15 @@
     <option value="dark">Dark</option>
 </select>
 <br><br><br>
-<label for="colorScheme">Color Scheme:</label>
-<select id="scheme">
-    <option value="green">Green</option>
-    <option value="blue">Blue</option>
-    <option value="red">Red</option>
-</select>
+<h2>Helpful Tips</h2>
+<ul>
+    <li>Rankings is based on the standard deviation of prediction and results</li>
+    <li>You can bookmark analyst you like (or the one's who do well)</li>
+    <li>Check the trending page to see who is going hot or cold</li>
+    <li>You can customize your profile here on the settings page</li>
+    <li>Email us anytime if you have any questions</li>
+</ul>
+
 <br><br><br>
 </main>
 <footer id="noFootPrint">

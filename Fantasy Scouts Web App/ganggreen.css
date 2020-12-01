@@ -121,6 +121,26 @@ footer{ position: absolute;
 	color: #000000;
 }
 
+/*TABLE CODE///////////////////////////////////////////////////////////////////////////////////////*/
+table { border: 1px solid #3399cc;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td, th { padding: 5px;
+	 border: 1px solid #000000;
+	 width: 33.3%;
+}
+
+td { text-align: center; }
+
+.text { text-align: left; }
+
+tr:nth-of-type(odd) { background-color: #4D2985; }
+
+.qa{ 	color: #000000;
+	font-weight: bold; 
+}
 
 /*FORM CODE///////////////////////////////////////////////////////////////////////////////////////*/
 label { float: left;
@@ -223,27 +243,24 @@ textarea { display: block;
 .columnLeft {	float: left;
 		width: 33.3%;
 		border: 3px solid #000000;
-		background-color: #BBFFBB;
 		text-align: center;
-		height: 660px;
+		height: 400px;
 		margin: 10px 0 10px 0;
 }
 
 .columnMiddle {	display: inline-block;
 		width: 33.3%;
 		border: 3px solid #000000;
-		background-color: #BBFFBB;
 		text-align: center;
-		height: 660px;
+		height: 400px;
 		margin: 10px 0 10px 0;
 }
 
 .columnRight {	float: right;
 		width: 33.3%;
 		border: 3px solid #000000;
-		background-color: #BBFFBB;
 		text-align: center;
-		height: 660px;
+		height: 400px;
 		margin: 10px 0 10px 0;
 }
 
