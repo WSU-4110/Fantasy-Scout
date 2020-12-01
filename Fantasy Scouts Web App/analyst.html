@@ -26,27 +26,54 @@
 </div>
 <main>
 <h2>Analyst Hub</h2>
-<p>Words to add here</p>
-<div class="article">
-<h4>Analyst:  <a href="https://www.espn.com" target="_blank">Analyst A</a></h4>
-<h4>Company: ESPN</h4>
-</div>
-<div class="article">
-<h4>Analyst:  <a href="https://www.espn.com" target="_blank">Analyst B</a></h4>
-<h4>Company: ESPN</h4>
-</div>
-<div class="article">
-<h4>Analyst:  <a href="https://www.thefantasyfootballers.com/" target="_blank">Analyst C</a></h4>
-<h4>Company: Fanatasy Footballers</h4>
-</div>
-<div class="article">
-<h4>Analyst:  <a href="https://www.espn.com" target="_blank">Analyst D</a></h4>
-<h4>Company: ESPN</h4>
-</div>
-<div class="article">
-<h4>Analyst:  <a href="https://www.thefantasyfootballers.com/" target="_blank">Analyst E</a></h4>
-<h4>Company: Fanatasy Footballers</h4>
-</div>
+<table>
+    <tr>
+        <th>Company</th>
+        <th>Website</th>
+        <th>Score</th>
+        <th>Grade</th>
+        <th>Bookmark</th>
+    </tr>
+<?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT name, website, ratingN, ratingC FROM Organizations";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  $x = 1;
+  while($row = mysqli_fetch_assoc($result)) {
+
+      echo "<tr>";
+      echo "<td>". $row["name"] ."</td>";
+      echo "<td><a href=". $row["website"] .">". $row["website"] ."</a></td>";
+      echo "<td>". $row["ratingN"] ."</td>";
+      echo "<td>". $row["ratingC"] ."</td>";
+      echo "<td><form method=post action=../php/public_html/bookmark.php><input type=hidden name=x value=$x><input type='submit'  value='toggle'></form></td>";
+      echo "</tr>";
+      $x++;
+  }
+
+
+
+} else {
+  echo "Failure to load";
+}
+
+mysqli_close($conn);
+?>    
+</table>
 </main>
 <footer id="noFootPrint">
 Copyright &copy; 2020 Fantasy Scouts<br>

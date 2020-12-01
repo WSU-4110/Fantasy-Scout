@@ -27,20 +27,38 @@
 </div>
 <main>
 <h2 class = "theme-auto"></h2class>Welcome to your Fantasy Scouts Hub</h2>
-<p>WORDS TO ADD HERE</p>
+
 <div id="fourBox">
 <div id="analysts">
 <h3 class = "theme-auto"></h2class><a href="analyst.html">Your Analysts</a></h3>
 <dl>
-	<dt><a href="analyst.html">Analyst 1</a></dt>
-		<dd>WORDS TO ADD HERE</dd>
+<?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
 
-	<dt><br><a href="analyst.html">Analyst 2</a></dt>
-		<dd>WORDS TO ADD HERE</dd>
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
 
-	<dt><br><a href="analyst.html">Analyst 3</a></dt>
-		<dd>WORDS TO ADD HERE</dd>
+$sql = "Select name, ratingN FROM Organizations WHERE orgID in (SELECT orgID from Bookmarks WHERE acctid = '1')";
+$result = mysqli_query($conn, $sql);
 
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "" . $row["name"]. ": " . $row["ratingN"]. "<br><br>";
+  }
+} else {
+  echo "0 results";
+}
+
+mysqli_close($conn);
+?>
 </dl>
 </div>
 
@@ -48,40 +66,138 @@
 <h3><a href="search.html">Search</a></h3>
 <dl>
 	<dt><a href="search.html">Search Based on Position</a></dt>
-		<dd>See who is most accurate for each poistion</dd>
+		<dd>Positional Accuracy</dd>
 
 	<dt><br><a href="search.html">Search Based on Analyst</a></dt>
-		<dd>Get in depth stats based on a specific Analyst</dd>
+		<dd>Analyst Accuracy</dd>
 
 	<dt><br><a href="search.html">Search Based on Time</a></dt>
-		<dd>See who is hitting consistently over a specific period of time </dd>
+		<dd>Consistent Accuracy</dd>
 
 </dl>
 </div>
 <div id="trends">
 <h3><a href="trends.html">Trending</a></h3>
-<h5>Who's Hot</h5>
+<h5>Who's Top</h5>
+
 <ul>
-	<li>Analyst W</li>
-	<li>Analyst X</li>
+	<li><?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT name FROM Organizations WHERE ratingN = (Select MAX(ratingN) FROM Organizations)";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "" . $row["name"]."<br>";
+  }
+} else {
+  echo "0 results";
+}
+mysqli_close($conn);
+?></li>
 </ul>
-<h5>Who's Not</h5>
+<h5>Who's Bottom</h5>
 <ul>
-	<li>Analyst Y</li>
-	<li>Analyst Z</li>
+	<li><?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT name FROM Organizations WHERE ratingN = (Select MIN(ratingN) FROM Organizations)";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "" . $row["name"]."<br>";
+  }
+} else {
+  echo "0 results";
+}
+mysqli_close($conn);
+?></li>
 </ul>
 </div>
 <div id="profile">
 <h3><a href="settings.html">Your Profile</a></h3>
 <h5>Profile</h5>
 <ul>
-	<li>Username</li>
-	<li>Bio</li>
+	<li>Username: <?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT username FROM Accounts WHERE acctID = '1'";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "" . $row["username"]."<br>";
+  }
+} else {
+  echo "0 results";
+}
+mysqli_close($conn);
+?></li>
+	<li>Email: <?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT email FROM Accounts WHERE acctID = '1'";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // output data of each row
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "" . $row["email"]."<br>";
+  }
+} else {
+  echo "0 results";
+}
+mysqli_close($conn);
+?></li>
 </ul>
 <h5>Settings</h5>
 <ul>
 	<li>Dark Mode</li>
-	<li>Color Scheme</li>
 </ul>
 </div>
 </div>
