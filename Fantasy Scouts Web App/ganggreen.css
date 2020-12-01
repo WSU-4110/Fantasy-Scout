@@ -1,13 +1,14 @@
 * { box-sizing: border-box; }
 /*BANNER///////////////////////////////////////////////////////////////////////////////////////*/
-header { background-color: #000000;
-         color: #00FF00;
+header { background-color: hsl(0, 0%, 0%);
+         color: #932432;
 	 font-family: Georgia, serif; 
-	 line-height: 400%;  
+	 line-height: 500%;  
 	 background-image: url(Images/Flight.jpg);
 	 background-position: right;
 	 background-repeat: no-repeat;
-	 height: 60px; 
+	 background-size: 6%;
+	 height: 80px; 
 	 margin-bottom: 0px;
 	 text-align: center;
 }
@@ -19,27 +20,22 @@ nav {	font-weight: bold;
 
 nav a { text-decoration: none; }
 
-nav a:link { color: #00FF00; }
+nav a:link { color: #3C1874; }
 
-nav a:visited { color: #FFFFFF; }
+nav a:visited { color: #932432; }
 
-nav a:hover { color: #000000; }
+nav a:hover { color: #DE354C; }
 
-
-/*PAGE CONTENT///////////////////////////////////////////////////////////////////////////////////////*/
-
-/* body {	background-color: #FFFFFF;
-	color: #666666;
-      	font-family: Verdana, Arial, sans-serif;
-} */
 
 /*PAGE CONTENT///////////////////////////////////////////////////////////////////////////////////////*/
+
 :root {
 	--dark-background-color: #111111;
 	--dark-background-color-alt: #222222;
 	--dark-trim-color: #333333;
-	--dark-text-color: #333333;
-	--dark-h2-color: #eeeeee;
+	--dark-text-color: #F3F3F3;
+	--dark-h2-color: #932432;
+	--dark-h2-color: #DE354C;
 }
 
 body {
@@ -47,18 +43,18 @@ body {
     --background-color: #FFFFFF;
 	--text-color: #666666;
 	--font-family: Verdana, Arial sans-serif;
+	--h2-color: #000000;
+	--h2-font-family: Georgia, serif;
 	
 	background: var(--background-color);
 	font-family: var(--font-family);
 	color: var(--text-color);
 }
 
-h2 {
-	--h2-color: #000000;
-	
-	color: var(--h2-color);
-	font-family: Georgia, serif;
-}
+	body a:link { color: #3C1874; }
+	body a:visited { color: #932432; }
+	body a:hover { color: #DE354C; }
+
 
 h3 { 	color: #333333;
    font-weight: bold;
@@ -68,6 +64,8 @@ body.theme-dark {
     --background-color: var(--dark-background-color);
 	--text-color: var(--dark-text-color);
 	--trim-color: var(--dark-trim-color);
+	--h2-color: var(--dark-h2-color);
+	--h3-color: var(--dark-h3-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -79,9 +77,7 @@ body.theme-dark {
 	h2.theme-auto {
 		--text-color: var(--dark-h2-color);
 	}
-	/* h3.theme-auto {
-		color:  #eeeeee;
-	} */
+
 }
 
 /*PAGE CONTENT///////////////////////////////////////////////////////////////////////////////////////*/
@@ -121,7 +117,7 @@ footer{ position: absolute;
 	font-style: italic;
 	text-align: center;
         padding: 10px;		
-	background-color: #EFEFEF; 
+	background-color: #F3F3F3; 
 	color: #000000;
 }
 
@@ -157,17 +153,15 @@ textarea { display: block;
 #analysts{	float: left;
 		width: 49.5%;
 		border: 2px solid #000000;	
-		background-color: #BBFFBB;
 		margin-bottom: 10px;
 		padding-left: 15px;
 		height: 260px;
-		
+
 } 
 
 #search {	float: right;
 		width: 49.5%;
 		border: 2px solid #000000;
-		background-color: #BBFFBB;
 		margin-bottom: 10px;
 		padding-left: 15px;
 		height: 260px;
@@ -177,7 +171,6 @@ textarea { display: block;
 #trends {	float: left;
 		width: 49.5%;
 		border: 2px solid #000000;
-		background-color: #BBFFBB;
 		margin-bottom: 10px;
 		padding-left: 15px;
 		height: 260px;
@@ -187,7 +180,6 @@ textarea { display: block;
 #profile {	float: right;
 		width: 49.5%;
 		border: 2px solid #000000;
-		background-color: #BBFFBB;
 		margin-bottom: 10px;
 		padding-left: 15px;
 		height: 260px;
@@ -209,13 +201,23 @@ textarea { display: block;
 
 
 /*PICTURE HELP///////////////////////////////////////////////////////////////////////////////////////*/
-#homehero { 	height: 300px;
-            	background-image: url(Images/logo.jpg);
-		background-size: 100% 100%; 
-		background-repeat: no-repeat; 
-		margin-bottom: 15px;
-}
 
+/* #logo {
+	background-image: url(Images/logo.png);
+	height: 200px;
+	width: 10000px;
+	background-repeat: no-repeat; 
+	overflow: hidden; } */
+
+	#logo {
+	background-image: url(Images/logo.png);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 175px;
+	width: 1000px;
+	background-repeat: no-repeat; 
+	}
 
 /*THREE COLUMN TREND///////////////////////////////////////////////////////////////////////////////////////*/
 .columnLeft {	float: left;
