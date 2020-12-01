@@ -1,0 +1,9 @@
+Positions
+posID,pos
+'QB','Quarterback'
+'RB','Runningback'
+'WR','Wide receiver'
+'TE','Tight end'
+'DEF','Defense'
+'K','Kicker'
+'SPC','Special teams'
