@@ -116,11 +116,11 @@ function scaleGrades($nextbestScore, $nextworstScore) {
     // Update grading scale in global table
     $updateScale = "
         UPDATE Global
-        SET Aceil = $Aceil, A = $A, Aminus = $Aminus,
-            Bceil = $Bceil, B = $B, Bminus = $Bminus,
-            Cceil = $Cceil, C = $C, Cminus = $Cminus,
-            Dceil = $Dceil, D = $D, Dminus = $Dminus,
-            Eceil = $Eceil, E = $E, Eminus = $Eminus,
+        SET Aceil = '$Aceil', A = '$A', Aminus = '$Aminus',
+            Bceil = '$Bceil', B = '$B', Bminus = '$Bminus',
+            Cceil = '$Cceil', C = '$C', Cminus = '$Cminus',
+            Dceil = '$Dceil', D = '$D', Dminus = '$Dminus',
+            Eceil = '$Eceil', E = '$E', Eminus = '$Eminus'
         WHERE globalID > 0;
     ";
     if (mysqli_query($con,$updateScale)) {
@@ -128,7 +128,7 @@ function scaleGrades($nextbestScore, $nextworstScore) {
         return true;
     }
     else {
-        echo "Global table UNSUCCESSFULLY updated<br><br>";
+        echo "Global table UNSUCCESSFULLY updated. ERROR: ".mysqli_error($con)."<br><br>";
         return false;
     }
 }
@@ -144,6 +144,10 @@ setWorst($worstOrg,"orgID");
 $nextbest = getNextBest("Organizations");
 $nextworst = getNextWorst("Organizations");
 
-scaleGrades($nextbest, $nextworst);
+scaleGrades($nextbest["ratingN"], $nextworst["ratingN"]);
 
+// ***CLOSE CONNECTION WITH SERVER***
+if (mysqli_close($con)) {
+  echo "Connection to database: FSDB successfully closed.";
+}
 ?>
