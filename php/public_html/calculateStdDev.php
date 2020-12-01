@@ -4,29 +4,30 @@ require 'init.php';
 
 // param1: query string to obtain all predictions to be analyzed
 function stdDev($Preds) {
-        // Query to get all predictions for this organization
-        $Predictions = mysqli_query($con,$Preds);
+    require 'init.php';
+    // Query to get all predictions for this organization
+    $Predictions = mysqli_query($con,$Preds);
 
-        // Declare/reset variables for stdDev calulation
-        $diffSum = 0; // Sum of all difference values
-        $n = 0; // number of diffs summed
-        $stdDev = 0; // Standard deviation value
-        // TESTING
-        echo "BEFORE:<br>    stdDev: $stdDev<br>    diffSum: $diffSum<br>    n: $n<br><br>";
-        while ($pred = mysqli_fetch_array($Predictions)) {
-            $diff = $pred["diff"];
-            // Raise diff to power of 2 as per standard deviation equation
-            $n += 1;
-            $diffSum += ($diff**2);
-        }
-        // Divide summation of diff squares by n-1 then take square root, as per standard deviation equation.
-        // Only do this if n > 1, since division by 0 is undefined. do not assign accuracy ranking for organizations with only 1 prediction.
-        if ($n > 1) {
-            $diffSum /= ($n-1);
-            $stdDev = sqrt($diffSum);
-        }
-        echo "AFTER:<br>    stdDev: $stdDev<br>    diffSum: $diffSum<br>    n: $n<br><br>";
-        return $stdDev;
+    // Declare/reset variables for stdDev calulation
+    $diffSum = 0; // Sum of all difference values
+    $n = 0; // number of diffs summed
+    $stdDev = 0; // Standard deviation value
+    // TESTING
+    echo "BEFORE:<br>    stdDev: $stdDev<br>    diffSum: $diffSum<br>    n: $n<br><br>";
+    while ($pred = mysqli_fetch_array($Predictions)) {
+        $diff = $pred["diff"];
+        // Raise diff to power of 2 as per standard deviation equation
+        $n += 1;
+        $diffSum += ($diff**2);
+    }
+    // Divide summation of diff squares by n-1 then take square root, as per standard deviation equation.
+    // Only do this if n > 1, since division by 0 is undefined. do not assign accuracy ranking for organizations with only 1 prediction.
+    if ($n > 1) {
+        $diffSum /= ($n-1);
+        $stdDev = sqrt($diffSum);
+    }
+    echo "AFTER:<br>    stdDev: $stdDev<br>    diffSum: $diffSum<br>    n: $n<br><br>";
+    return $stdDev;
 }
 
 // RANK ORGANIZATIONS
