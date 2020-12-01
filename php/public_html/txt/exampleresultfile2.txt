@@ -1,9 +1,8 @@
 Players
 02
 fname, lname, posID, teamID, rank
-Tom Brady QB NE 8
-fuck shit QB NE 9
-Kyler Murray QB ARI 1
-Matt Ryan QB ATL 4
-Josh Allen QB BUF 13
-P.J Walker QB CAR 7
+Tom Brady QB NE 2
+Kyler Murray QB ARI 4
+Matt Ryan QB ATL 6
+Josh Allen QB BUF 8
+P.J Walker QB CAR 10

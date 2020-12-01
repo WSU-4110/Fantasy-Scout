@@ -1,12 +1,23 @@
 Predictions
 01
 orgName, playerFname, playerLname, predictedrank, position, team, analystFname, analystLname
-ESPN Tom Brady 10 QB NE none none
-ESPN Kyler Murray 12 QB ARI Fucking Bozo
-ESPN Matt Ryan 13 QB ATL Bimbo Bitch
-ESPN Josh Allen 14 QB BUF Bimbo Bitch
-ESPN P.J Walker 15 QB CAR Fucking Bozo
-NFL fuck shit 12 RB NE John Smith
-NFL fuck shit 13 RB NE John Smith
-NFL fuck shit 5 RB NE John Smith
-NFL fuck shit 2 RB NE none none
+ESPN Tom Brady 1 QB NE none none
+ESPN Kyler Murray 2 QB ARI none none
+ESPN Matt Ryan 4 QB ATL none none
+ESPN Josh Allen 6 QB BUF none none
+ESPN P.J Walker 5 QB CAR none none
+NFL Tom Brady 3 QB NE none none
+NFL Kyler Murray 1 QB ARI none none
+NFL Matt Ryan 2 QB ATL none none
+NFL Josh Allen 4 QB BUF none none
+NFL P.J Walker 9 QB CAR none none
+Fantasy_Footballers Tom Brady 3 QB NE none none
+Fantasy_Footballers Kyler Murray 6 QB ARI none none
+Fantasy_Footballers Matt Ryan 9 QB ATL none none
+Fantasy_Footballers Josh Allen 12 QB BUF none none
+Fantasy_Footballers P.J Walker 15 QB CAR none none
+Yahoo_Sports Tom Brady 5 QB NE none none
+Yahoo_Sports Kyler Murray 4 QB ARI none none
+Yahoo_Sports Matt Ryan 3 QB ATL none none
+Yahoo_Sports Josh Allen 2 QB BUF none none
+Yahoo_Sports P.J Walker 1 QB CAR none none
