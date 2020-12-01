@@ -134,7 +134,7 @@ for ($i = 0; $i < sizeof($files); $i++) {
             echo "New Prediction successfully added to DB<br><br>";
         }
         else {
-            echo "New Prediction UNSUCCESSFULLY added to DB! Error: ".mysqli_error($con);
+            echo "New Prediction UNSUCCESSFULLY added to DB! Error: ".mysqli_error($con)."<br><br>";
         }
     }
     else {
