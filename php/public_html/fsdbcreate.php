@@ -142,7 +142,8 @@ CREATE TABLE IF NOT EXISTS Predictions (
 
 // Make query to create global table
 $globalTbl = '
-CREATE TABLE IF NOT EXISTS Predictions (
+CREATE TABLE IF NOT EXISTS Global (
+    globalID INT(1) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY
     currentWeek INT(5) UNSIGNED NOT NULL,
     FOREIGN KEY (currentWeek) REFERENCES Week(weekID),
     Aceil DOUBLE(6, 3) UNSIGNED,

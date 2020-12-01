@@ -14,7 +14,12 @@ $files = array(
     "txt/loadOrgs.txt"
 );
 
-
+// Create only record in global table
+$insertGlobal = "
+    INSERT INTO Global (currentWeek)
+    VALUES ('12');
+";
+mysqli_query($con,$insertGlobal);
 
 // For each file to be loaded, load the formatted .txt file into the database
 for ($i = 0; $i < sizeof($files); $i++) {
@@ -38,10 +43,10 @@ for ($i = 0; $i < sizeof($files); $i++) {
             VALUES ($values);
         ";
         if (mysqli_query($con, $load)) {
-            echo "Team loaded successfully into fsdb<br><br>";
+            echo "$table loaded successfully into fsdb<br><br>";
         }
         else {
-            echo "Team load FAILURE!:<br>" . mysqli_error($con) . "<br><br>";
+            echo "$table load FAILURE!:<br>" . mysqli_error($con) . "<br><br>";
         }
     }
     fclose($file);

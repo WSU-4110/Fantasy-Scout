@@ -164,4 +164,16 @@ $Eceil = $Dceil + $grade;
     $E = $Eceil + ($grade/3);
     $Eminus = $E + ($grade/3);
 
+// Update grading scale in global table
+$updateScale = "
+    UPDATE Global
+    SET Aceil = $Aceil, A = $A, Aminus = $Aminus,
+        Bceil = $Bceil, B = $B, Bminus = $Bminus,
+        Cceil = $Cceil, C = $C, Cminus = $Cminus,
+        Dceil = $Dceil, D = $D, Dminus = $Dminus,
+        Eceil = $Eceil, E = $E, Eminus = $Eminus,
+    WHERE globalID > 0;
+";
+if (mysqli_query($con,$updateScale)) { echo "Global table successfully updated<br><br>"; }
+else { echo "Global table UNSUCCESSFULLY updated<br><br>"; }
 ?>
