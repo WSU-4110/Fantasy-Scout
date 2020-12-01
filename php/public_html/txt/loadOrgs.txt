@@ -1,6 +1,6 @@
 Organizations
 name,website
 'ESPN','https://www.espn.com/fantasy/football/'
-'Fantasy_Footballers','https://www.thefantasyfootballers.com/'
-'NFL','https://fantasy.nfl.com/'
-'Yahoo_Sports','https://sports.yahoo.com/'
+'DraftKings','https://www.draftkings.com'
+'CBS','https://www.cbssports.com'
+'Y!','https://sports.yahoo.com/'
