@@ -4,27 +4,30 @@ require 'init.php';
 
 // RANK ORGANIZATIONS
 // get all organizations
-$getAnalysts = "
+$getOrganizations = "
     SELECT *
     FROM Organizations
     WHERE orgID > 0;
 ";
-$analysts = mysqli_query($con,$getAnalysts);
+$Organizations = mysqli_query($con,$getOrganizations);
+
+
 // Calculate numeric accuracy rank value (standard deviation) for each organization
-while ($analyst = mysqli_fetch_array($analysts)) {
+while ($Organization = mysqli_fetch_array($Organizations)) {
     // get organization primary key
-    $analystID = $analyst["orgID"];
+    $OrganizationID = $Organization["orgID"];
     // Query to get all predictions for this organization
     $Predictions = "
         SELECT *
         FROM Predictions
-        WHERE orgID = $analystID;
+        WHERE orgID = $OrganizationID;
     ";
     $Predictions = mysqli_query($con,$Predictions);
-    // Sum all the diffs to be used in calculating standard deviation
-    $diffSum = 0;
-    // number of diffs summed
-    $n = 0;
+    
+    // Declare/reset variables for stdDev calulation
+    $diffSum = 0; // Sum of all difference values
+    $n = 0; // number of diffs summed
+    $stdDev = 0; // Standard deviation value
     while ($pred = mysqli_fetch_array($Predictions)) {
         $diff = $pred["diff"];
         // Raise diff to power of 2 as per standard deviation equation
@@ -41,16 +44,17 @@ while ($analyst = mysqli_fetch_array($analysts)) {
     $assignNumRank = "
         UPDATE Organizations
         SET ratingN = $stdDev
-        WHERE orgID = $analystID;
+        WHERE orgID = $OrganizationID;
     ";
     if (mysqli_query($con,$assignNumRank)) {
-        echo "Organization with orgID = $analystID successfully assigned standard deviation of $stdDev<br><br>";
+        echo "Organization with orgID = $OrganizationID successfully assigned standard deviation of $stdDev<br><br>";
     }
     else {
-        echo "Organization with orgID = $analystID UNSUCCESSFULLY assigned standard deviation of $stdDev. Error: ".mysqli_error()."<br><br>";
+        echo "Organization with orgID = $OrganizationID UNSUCCESSFULLY assigned standard deviation of $stdDev. Error: ".mysqli_error()."<br><br>";
     }
 }
 
+/*
 // RANK ANALYSTS
 // get all analysts
 $getAnalysts = "
@@ -100,7 +104,7 @@ while ($analyst = mysqli_fetch_array($analysts)) {
     else {
         echo "Analyst with analystID = $analystID UNSUCCESSFULLY assigned standard deviation of $stdDev. Error: ".mysqli_error()."<br><br>";
     }
-}
+}*/
 
 
 
