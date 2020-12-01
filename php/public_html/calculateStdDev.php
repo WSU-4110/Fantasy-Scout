@@ -4,8 +4,6 @@ require 'init.php';
 
 // param1: query string to obtain all predictions to be analyzed
 function stdDev($Preds) {
-        // get primary key
-        $ID = $Organization[$idType];
         // Query to get all predictions for this organization
         $Predictions = mysqli_query($con,$Preds);
 
@@ -50,7 +48,7 @@ while ($Organization = mysqli_fetch_array($Organizations)) {
         FROM Predictions
         WHERE orgID = $OrganizationID;
     ";
-    $Dev = stdDev($P)
+    $Dev = stdDev($P);
     // Assign organization numeric ranking equal to that organization's standard deviation ($stdDev)
     $assignNumRank = "
         UPDATE Organizations
