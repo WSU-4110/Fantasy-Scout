@@ -13,7 +13,7 @@
 ----------------------------------------------------------------------
 | Data collection variety and accuracy |
 |---|
-|**Goal**: TO provide data sets from at least 10 major analyst sources and to check the accuracy of our own data collection |
+|**Goal**: TO provide data sets from at least 4 major analyst sources and to check the accuracy of our own data collection |
 |**Stakeholders**: Affects all users by the quality of the information they receive. Affects developers by assuring the data set we provide is accurate and varied | 
 |**Description**: We will compile data from at least 10 major source of fantasy football predictions and analytics and compare it against the weekly reports of actual reported scores, indexing analyst predictions against the actual outcome and reporting the variance	|
 |**Origin**: Came from a team collaboration in app proposal stage in deciding how our application presents data	|
@@ -55,18 +55,6 @@
 |**Origin**: Inspired by famous data representation applications, notably fantasy football and stock apps. Team agreed on appealing to dark color scheme as representative of our brand |
 |**Version**: 1.0 |
 |**Date**:	9.24.2020	 |
-|**Priority**: 1 |
-----------------------------------------------------------------------
-
-----------------------------------------------------------------------
-| Data search, sort, and filter system |
-|---|
-|**Goal**: Create a data search, sort, and filter system |
-|**Stakeholders**: Users of the application |
-|**Description**: Users will be able to use the search, sort, and filtering system to refine by time, position, analyst and analyst company |
-|**Origin**: Commonly used data search, sort, and filter systems (e.g. Stock Market apps, Fantasy Football apps, etc… |
-|**Version**: 1.0 |
-|**Date**:	9.24.2020	|
 |**Priority**: 1 |
 ----------------------------------------------------------------------
 
