@@ -39,8 +39,7 @@ for ($i = 0; $i < sizeof($files); $i++) {
   $insertString = fgets($file);
 
 
-  $successes = 0;
-  $failures = 0;
+
   // Read the rest of the file, each line until the end will contain data to be input into database
   while (!feof($file)) {
     // Values to be inserted into database
@@ -60,18 +59,21 @@ for ($i = 0; $i < sizeof($files); $i++) {
     $playerExistsCheck = mysqli_query($con, $existingPlayerCheck);
     // Player exists
     if ($playerExistsCheck) {
+        echo "Player $Pfname $Plname already exists.<br><br>";
         $player = mysqli_fetch_array($playerExistsCheck);
     }
     // Player doesn't exist
-    /*else {
+    else {
+        echo "Player $Pfname $Plname already exists.<br><br>";
         $addPlayer = "
           INSERT INTO Players (fname, lname, position, team, gamesPlayed)
           VALUES ('$Pfname','$Plname','$pos','$team','0');
         ";
         $player = mysqli_fetch_array(mysqli_query($con,$addPlayer));
-    }*/
+    }
     // Get the player's primary key
     $playerID = $player["playerID"];
+    echo "PlayerID: $playerID successfully retrieved<br><br>";
 
     // GET ORGANIZATION PARIMARY KEY
     $getOrgId = "
@@ -81,9 +83,10 @@ for ($i = 0; $i < sizeof($files); $i++) {
     ";
     $orgID = mysqli_fetch_array(mysqli_query($con,$getOrgId));
     $orgID = $orgID["orgID"];
+    echo "orgID: $orgID successfully retrieved<br><br>";
 
     // IF ANALYST IS PROVIDED, GET ANALYST ID
-    /*if ($analyFname != 'none') {
+    if ($analyFname != 'none') {
       $getAnalyId = "
         SELECT *
         FROM Analysts
@@ -108,10 +111,19 @@ for ($i = 0; $i < sizeof($files); $i++) {
           echo "AnalystID: $analyID successfully created and retrieved<br><br>";
       }
     }
-    else { echo "No analyst for this prediction<br><br>"; }*/
+    else { echo "No analyst for this prediction<br><br>"; }
 
     // GET WEEK PRIMARY KEY
-    $weekID = $weekNum;
+    $getWeekID = "
+        SELECT *
+        FROM Week
+        WHERE weekNum = '$weekNum';
+    ";
+    $weekID = mysqli_fetch_array(mysqli_query($con,$getWeekID));
+    $weekID = $weekID["weekID"];
+    echo "WeekID: $weekID successfully retrieved<br><br>";
+
+
 
     // BUILD PREDICTION AND INSERT INTO database
     if ($analyFname == 'none') {
@@ -121,30 +133,27 @@ for ($i = 0; $i < sizeof($files); $i++) {
             VALUES ('$weekID', '$playerID', '$pos', '$orgID', '$team', '$rank');
         ";
         if (mysqli_query($con,$Prediction)) {
-            $successes += 1;
+            echo "New Prediction successfully added to DB<br><br>";
         }
         else {
-            $failures += 1;
+            echo "New Prediction UNSUCCESSFULLY added to DB! Error: ".mysqli_error($con)."<br><br>";
         }
     }
-    /*else {
+    else {
         $Prediction = "
             INSERT INTO $table (weekID, playerID, posID, orgID, teamID, projRank, analystID)
             VALUES ('$weekID', '$playerID', '$pos', '$orgID', '$team', '$rank', '$analyID');
         ";
         if (mysqli_query($con,$Prediction)) {
-            $successes += 1;
+            echo "New Prediction successfully added to DB<br><br>";
         }
         else {
-            $failures += 1;
+            echo "New Prediction UNSUCCESSFULLY added to DB! Error: ".mysqli_error($con)."<br><br>";
         }
-    }*/
+    }
 
   }
   fclose($file);
-  echo "Loop #: $i | Prediction load for organization with ID: $orgID<br>
-     $successes predictions successfully loaded into database<br>
-     $failures predictions unsuccessfully loaded into database<br><br>";
 }
 
 

@@ -1,368 +1,368 @@
 Predictions
 12
-Y! Daily Terry McLaurin 1 WR WAS none none
-Y! Daily Justin Jefferson 2 WR MIN none none
-Y! Daily DK Metcalf 3 WR SEA none none
-Y! Daily Keenan Allen 4 WR LAC none none
-Y! Daily Davante Adams 5 WR GB none none
-Y! Daily Will Fuller 6 WR HOU none none
-Y! Daily Ventell Bryant 7 WR DAL none none
-Y! Daily Jason Moore 8 WR LAC none none
-Y! Daily Calvin Ridley 9 WR ATL none none
-Y! Daily D.J. Moore 10 WR CAR none none
-Y! Daily Michael Thomas 11 WR NO none none
-Y! Daily Tyreek Hill 12 WR KC none none
-Y! Daily John Hightower 13 WR PHI none none
-Y! Daily J.J. Arcega-Whiteside 14 WR PHI none none
-Y! Daily Victor Bolden 15 WR DET none none
-Y! Daily Cedrick Wilson 16 WR DAL none none
-Y! Daily Trent Taylor 17 WR SF none none
-Y! Daily Cooper Kupp 18 WR LA none none
-Y! Daily Diontae Johnson 19 WR PIT none none
-Y! Daily Mike Williams 20 WR LAC none none
-Y! Daily Chase Claypool 21 WR PIT none none
-Y! Daily Michael Pittman 22 WR IND none none
-Y! Daily Chris Godwin 23 WR TB none none
-Y! Daily Robert Woods 24 WR LA none none
-Y! Daily Darius Slayton 25 WR NYG none none
-Y! Daily Allen Robinson 26 WR CHI none none
-Y! Daily Brandin Cooks 27 WR HOU none none
-Y! Daily Darrius Shepherd 28 WR GB none none
-Y! Daily Amari Cooper 29 WR DAL none none
-Y! Daily Antonio Brown 30 WR TB none none
-Y! Daily Sterling Shepard 31 WR NYG none none
-Y! Daily Tyler Lockett 32 WR SEA none none
-Y! Daily Mike Evans 33 WR TB none none
-Y! Daily A.J. Brown 34 WR TEN none none
-Y! Daily DeVante Parker 35 WR MIA none none
-Y! Daily Deebo Samuel 36 WR SF none none
-Y! Daily Marvin Jones 37 WR DET none none
-Y! Daily Nelson Agholor 38 WR LV none none
-Y! Daily Cole Beasley 39 WR BUF none none
-Y! Daily Equanimeous St. Brown 40 WR GB none none
-Y! Daily Matt Slater 41 WR NE none none
-Y! Daily Jamison Crowder 42 WR NYJ none none
-Y! Daily Jakobi Meyers 43 WR NE none none
-Y! Daily Robby Anderson 44 WR CAR none none
-Y! Daily Christian Kirk 45 WR ARI none none
-Y! Daily CeeDee Lamb 46 WR DAL none none
-Y! Daily Marvin Hall 47 WR DET none none
-Y! Daily Tee Higgins 48 WR CIN none none
-Y! Daily Jarvis Landry 49 WR CLE none none
-Y! Daily JuJu Smith-Schuster 50 WR PIT none none
-Y! Daily Corey Davis 51 WR TEN none none
-Y! Daily DaeSean Hamilton 52 WR DEN none none
-Y! Daily Isaiah Wright 53 WR WAS none none
-Y! Daily K.J. Hill 54 WR LAC none none
-Y! Daily Keelan Cole 55 WR JAC none none
-Y! Daily Jalen Reagor 56 WR PHI none none
-Y! Daily Tyler Boyd 57 WR CIN none none
-Y! Daily Russell Gage 58 WR ATL none none
-Y! Daily Curtis Samuel 59 WR CAR none none
-Y! Daily Olamide Zaccheaus 60 WR ATL none none
-Y! Daily T.Y. Hilton 61 WR IND none none
-Y! Daily Damiere Byrd 62 WR NE none none
-Y! Daily Josh Reynolds 63 WR LA none none
-Y! Daily Zach Pascal 64 WR IND none none
-Y! Daily Marquez Valdes-Scantling 65 WR GB none none
-Y! Daily Breshad Perriman 66 WR NYJ none none
-Y! Daily Marquise Brown 67 WR BAL none none
-Y! Daily Allen Lazard 68 WR GB none none
-Y! Daily Laviska Shenault 69 WR JAC none none
-Y! Daily Javon Wims 70 WR CHI none none
-Y! Daily Trent Sherfield 71 WR ARI none none
-Y! Daily Richie James 72 WR SF none none
-Y! Daily Golden Tate 73 WR NYG none none
-Y! Daily Emmanuel Sanders 74 WR NO none none
-Y! Daily Gabriel Davis 75 WR BUF none none
-Y! Daily Kendrick Bourne 76 WR SF none none
-Y! Daily Willie Snead 77 WR BAL none none
-Y! Daily Rashard Higgins 78 WR CLE none none
-Y! Daily David Moore 79 WR SEA none none
-Y! Daily Olabisi Johnson 80 WR MIN none none
-Y! Daily Mecole Hardman 81 WR KC none none
-Y! Daily Hunter Renfrow 82 WR LV none none
-Y! Daily Denzel Mims 83 WR NYJ none none
-Y! Daily Jerry Jeudy 84 WR DEN none none
-Y! Daily Jakeem Grant 85 WR MIA none none
-Y! Daily Andy Isabella 86 WR ARI none none
-Y! Daily Tim Patrick 87 WR DEN none none
-Y! Daily Sammy Watkins 88 WR KC none none
-Y! Daily Khadarel Hodge 89 WR CLE none none
-Y! Daily Antonio Callaway 90 WR MIA none none
-Y! Daily Kalif Raymond 91 WR TEN none none
-Y! Daily Keke Coutee 92 WR HOU none none
-Y! Daily Joe Reed 93 WR LAC none none
-Y! Daily Rashard Davis 94 WR TEN none none
-Y! Daily Michael Gallup 95 WR DAL none none
-Y! Daily N'Keal Harry 96 WR NE none none
-Y! Daily Steven Sims 97 WR WAS none none
-Y! Daily Jake Kumerow 98 WR BUF none none
-Y! Daily Van Jefferson 99 WR LA none none
-Y! Daily Darnell Mooney 100 WR CHI none none
-Y! Daily Henry Ruggs 101 WR LV none none
-Y! Daily Devin Duvernay 102 WR BAL none none
-Y! Daily Isaiah McKenzie 103 WR BUF none none
-Y! Daily Pharoh Cooper 104 WR CAR none none
-Y! Daily Mohamed Sanu 105 WR DET none none
-Y! Daily Tre'Quan Smith 106 WR NO none none
-Y! Daily Travis Fulgham 107 WR PHI none none
-Y! Daily Anthony Miller 108 WR CHI none none
-Y! Daily Cam Sims 109 WR WAS none none
-Y! Daily A.J. Green 110 WR CIN none none
-Y! Daily Demarcus Robinson 111 WR KC none none
-Y! Daily Jalen Guyton 112 WR LAC none none
-Y! Daily Collin Johnson 113 WR JAC none none
-Y! Daily Quintez Cephus 114 WR DET none none
-Y! Daily Alshon Jeffery 115 WR PHI none none
-Y! Daily Tajae Sharpe 116 WR MIN none none
-Y! Daily Greg Ward 117 WR PHI none none
-Y! Daily Austin Mack 118 WR NYG none none
-Y! Daily Miles Boykin 119 WR BAL none none
-Y! Daily James Proche 120 WR BAL none none
-Y! Daily Freddie Swain 121 WR SEA none none
-Y! Daily Bryan Edwards 122 WR LV none none
-Y! Daily K.J. Hamler 123 WR DEN none none
-Y! Daily Auden Tate 124 WR CIN none none
-Y! Daily Brandon Zylstra 125 WR CAR none none
-Y! Daily Jeff Smith 126 WR NYJ none none
-Y! Daily Chad Beebe 127 WR MIN none none
-Y! Daily Dez Bryant 128 WR BAL none none
-Y! Daily Cordarrelle Patterson 129 WR CHI none none
-Y! Daily James Washington 130 WR PIT none none
-Y! Daily DeAndre Carter 131 WR HOU none none
-Y! Daily Dontrelle Inman 132 WR WAS none none
-Y! Daily Scott Miller 133 WR TB none none
-Y! Daily Terry Godwin 134 WR JAC none none
-Y! Daily Daurice Fountain 135 WR IND none none
-Y! Daily Christian Blake 136 WR ATL none none
-Y! Daily Gunner Olszewski 137 WR NE none none
-Y! Daily Braxton Berrios 138 WR NYJ none none
-Y! Daily Stefon Diggs 139 WR BUF none none
-Y! Daily DeAndre Hopkins 140 WR ARI none none
-Y! Daily Zay Jones 141 WR LV none none
-Y! Daily Donovan Peoples-Jones 142 WR CLE none none
-Y! Daily Jamal Agnew 143 WR DET none none
-Y! Daily KeeSean Johnson 144 WR ARI none none
-Y! Daily Nick Westbrook-Ikhine 145 WR TEN none none
-Y! Daily Ryan Griffin 1 TE NYJ none none
-Y! Daily Travis Kelce 2 TE KC none none
-Y! Daily Jack Doyle 3 TE IND none none
-Y! Daily Matt LaCosse 4 TE NE none none
-Y! Daily Nick Vannett 5 TE DEN none none
-Y! Daily Darren Waller 6 TE LV none none
-Y! Daily Blake Bell 7 TE DAL none none
-Y! Daily Ricky Seals-Jones 8 TE KC none none
-Y! Daily Jeremy Sprinkle 9 TE WAS none none
-Y! Daily Dallas Goedert 10 TE PHI none none
-Y! Daily T.J. Hockenson 11 TE DET none none
-Y! Daily Mike Gesicki 12 TE MIA none none
-Y! Daily Chris Manhertz 13 TE CAR none none
-Y! Daily Jace Sternberger 14 TE GB none none
-Y! Daily Evan Engram 15 TE NYG none none
-Y! Daily Robert Tonyan 16 TE GB none none
-Y! Daily Rob Gronkowski 17 TE TB none none
-Y! Daily Hayden Hurst 18 TE ATL none none
-Y! Daily Austin Hooper 19 TE CLE none none
-Y! Daily Hunter Henry 20 TE LAC none none
-Y! Daily Jordan Reed 21 TE SF none none
-Y! Daily Dalton Schultz 22 TE DAL none none
-Y! Daily Gerald Everett 23 TE LA none none
-Y! Daily Richard Rodgers 24 TE PHI none none
-Y! Daily Eric Ebron 25 TE PIT none none
-Y! Daily Kyle Rudolph 26 TE MIN none none
-Y! Daily Jordan Akins 27 TE HOU none none
-Y! Daily Jonnu Smith 28 TE TEN none none
-Y! Daily Jason Witten 29 TE LV none none
-Y! Daily Marcedes Lewis 30 TE GB none none
-Y! Daily Josh Hill 31 TE NO none none
-Y! Daily Logan Thomas 32 TE WAS none none
-Y! Daily Dan Arnold 33 TE ARI none none
-Y! Daily Tyler Eifert 34 TE JAC none none
-Y! Daily Mo Alie-Cox 35 TE IND none none
-Y! Daily Dawson Knox 36 TE BUF none none
-Y! Daily Trey Burton 37 TE IND none none
-Y! Daily Will Dissly 38 TE SEA none none
-Y! Daily Noah Fant 39 TE DEN none none
-Y! Daily Jared Cook 40 TE NO none none
-Y! Daily Harrison Bryant 41 TE CLE none none
-Y! Daily Jaeden Graham 42 TE ATL none none
-Y! Daily Darren Fells 43 TE HOU none none
-Y! Daily Ryan Izzo 44 TE NE none none
-Y! Daily Anthony Firkser 45 TE TEN none none
-Y! Daily Cethan Carter 46 TE CIN none none
-Y! Daily Levine Toilolo 47 TE NYG none none
-Y! Daily Jimmy Graham 48 TE CHI none none
-Y! Daily Christopher Herndon 49 TE NYJ none none
-Y! Daily Charles Clay 50 TE ARI none none
-Y! Daily Tyler Higbee 51 TE LA none none
-Y! Daily Jacob Hollister 52 TE SEA none none
-Y! Daily Drew Sample 53 TE CIN none none
-Y! Daily James O'Shaughnessy 54 TE JAC none none
-Y! Daily Ross Dwelley 55 TE SF none none
-Y! Daily Adam Shaheen 56 TE MIA none none
-Y! Daily Xavier Grimble 57 TE BAL none none
-Y! Daily Cole Kmet 58 TE CHI none none
-Y! Daily Vance McDonald 59 TE PIT none none
-Y! Daily Durham Smythe 60 TE MIA none none
-Y! Daily Jesse James 61 TE DET none none
-Y! Daily Jordan Thomas 62 TE NE none none
-Y! Daily Kaden Smith 63 TE NYG none none
-Y! Daily Cameron Brate 64 TE TB none none
-Y! Daily Adam Trautman 65 TE NO none none
-Y! Daily Ian Thomas 66 TE CAR none none
-Y! Daily Foster Moreau 67 TE LV none none
-Y! Daily Demetrius Harris 68 TE CHI none none
-Y! Daily Derrick Henry 1 RB TEN none none
-Y! Daily James Robinson 2 RB JAC none none
-Y! Daily Miles Sanders 3 RB PHI none none
-Y! Daily C.J. Prosise 4 RB HOU none none
-Y! Daily Peyton Barber 5 RB WAS none none
-Y! Daily Alvin Kamara 6 RB NO none none
-Y! Daily Damien Harris 7 RB NE none none
-Y! Daily Ezekiel Elliott 8 RB DAL none none
-Y! Daily Chris Carson 9 RB SEA none none
-Y! Daily Wayne Gallman 10 RB NYG none none
-Y! Daily Brian Hill 11 RB ATL none none
-Y! Daily Aaron Jones 12 RB GB none none
-Y! Daily Josh Jacobs 13 RB LV none none
-Y! Daily Clyde Edwards-Helaire 14 RB KC none none
-Y! Daily Trenton Cannon 15 RB CAR none none
-Y! Daily Antonio Gibson 16 RB WAS none none
-Y! Daily Austin Ekeler 17 RB LAC none none
-Y! Daily Kenyan Drake 18 RB ARI none none
-Y! Daily Frank Gore 19 RB NYJ none none
-Y! Daily Mike Davis 20 RB CAR none none
-Y! Daily Raheem Mostert 21 RB SF none none
-Y! Daily Benny Snell 22 RB PIT none none
-Y! Daily Zack Moss 23 RB BUF none none
-Y! Daily Adrian Peterson 24 RB DET none none
-Y! Daily Nyheim Hines 25 RB IND none none
-Y! Daily Ronald Jones 26 RB TB none none
-Y! Daily Giovani Bernard 27 RB CIN none none
-Y! Daily Patrick Laird 28 RB MIA none none
-Y! Daily Tyler Ervin 29 RB GB none none
-Y! Daily Bo Scarbrough 30 RB SEA none none
-Y! Daily Bo Scarbrough 31 RB SEA none none
-Y! Daily Jordan Wilkins 32 RB IND none none
-Y! Daily Myles Gaskin 33 RB MIA none none
-Y! Daily Darrell Henderson 34 RB LA none none
-Y! Daily David Montgomery 35 RB CHI none none
-Y! Daily Duke Johnson 36 RB HOU none none
-Y! Daily Kerryon Johnson 37 RB DET none none
-Y! Daily Ryan Nall 38 RB CHI none none
-Y! Daily Jordan Howard 39 RB PHI none none
-Y! Daily Trayveon Williams 40 RB CIN none none
-Y! Daily Melvin Gordon 41 RB DEN none none
-Y! Daily Anthony McFarland 42 RB PIT none none
-Y! Daily Leonard Fournette 43 RB TB none none
-Y! Daily Justice Hill 44 RB BAL none none
-Y! Daily Cam Akers 45 RB LA none none
-Y! Daily Phillip Lindsay 46 RB DEN none none
-Y! Daily Jeremy McNichols 47 RB TEN none none
-Y! Daily Troymaine Pope 48 RB LAC none none
-Y! Daily Kareem Hunt 49 RB CLE none none
-Y! Daily Devontae Booker 50 RB LV none none
-Y! Daily Samaje Perine 51 RB CIN none none
-Y! Daily J.D. McKissic 52 RB WAS none none
-Y! Daily Tony Pollard 53 RB DAL none none
-Y! Daily Chase Edmonds 54 RB ARI none none
-Y! Daily Sony Michel 55 RB NE none none
-Y! Daily Darrel Williams 56 RB KC none none
-Y! Daily DeeJay Dallas 57 RB SEA none none
-Y! Daily Malcolm Brown 58 RB LA none none
-Y! Daily Jamaal Williams 59 RB GB none none
-Y! Daily Le'Veon Bell 60 RB KC none none
-Y! Daily Carlos Hyde 61 RB SEA none none
-Y! Daily Latavius Murray 62 RB NO none none
-Y! Daily Boston Scott 63 RB PHI none none
-Y! Daily Ito Smith 64 RB ATL none none
-Y! Daily Matt Breida 65 RB MIA none none
-Y! Daily Alexander Mattison 66 RB MIN none none
-Y! Daily Devin Singletary 67 RB BUF none none
-Y! Daily Alfred Morris 68 RB NYG none none
-Y! Daily Devine Ozigbo 69 RB JAC none none
-Y! Daily Josh Adams 70 RB NYJ none none
-Y! Daily D'Ernest Johnson 71 RB CLE none none
-Y! Daily Ke'Shawn Vaughn 72 RB TB none none
-Y! Daily Royce Freeman 73 RB DEN none none
-Y! Daily Jeffery Wilson 74 RB SF none none
-Y! Daily Jerick McKinnon 75 RB SF none none
-Y! Daily Lamar Miller 76 RB CHI none none
-Y! Daily James White 77 RB NE none none
-Y! Daily Joshua Kelley 78 RB LAC none none
-Y! Daily DeAndre Washington 79 RB MIA none none
-Y! Daily Gus Edwards 80 RB BAL none none
-Y! Daily Dalvin Cook 81 RB MIN none none
-Y! Daily Nick Chubb 82 RB CLE none none
-Y! Daily D'Onta Foreman 83 RB TEN none none
-Y! Daily Dion Lewis 84 RB NYG none none
-Y! Daily LeSean McCoy 85 RB TB none none
-Y! Daily Ameer Abdullah 86 RB MIN none none
-Y! Daily Scottie Phillips 87 RB HOU none none
-Y! Daily Corey Clement 88 RB PHI none none
-Y! Daily Jalen Hurts 1 QB PHI none none
-Y! Daily Josh Allen 2 QB BUF none none
-Y! Daily Jared Goff 3 QB LA none none
-Y! Daily Patrick Mahomes 4 QB KC none none
-Y! Daily Tom Brady 5 QB TB none none
-Y! Daily Justin Herbert 6 QB LAC none none
-Y! Daily Russell Wilson 7 QB SEA none none
-Y! Daily Matt Ryan 8 QB ATL none none
-Y! Daily Philip Rivers 9 QB IND none none
-Y! Daily Deshaun Watson 10 QB HOU none none
-Y! Daily Aaron Rodgers 11 QB GB none none
-Y! Daily Ben Roethlisberger 12 QB PIT none none
-Y! Daily Matthew Stafford 13 QB DET none none
-Y! Daily Kyler Murray 14 QB ARI none none
-Y! Daily Daniel Jones 15 QB NYG none none
-Y! Daily Derek Carr 16 QB LV none none
-Y! Daily Teddy Bridgewater 17 QB CAR none none
-Y! Daily Alex Smith 18 QB WAS none none
-Y! Daily Ryan Tannehill 19 QB TEN none none
-Y! Daily Kirk Cousins 20 QB MIN none none
-Y! Daily Ryan Fitzpatrick 21 QB MIA none none
-Y! Daily Nick Mullens 22 QB SF none none
-Y! Daily Andy Dalton 23 QB DAL none none
-Y! Daily Baker Mayfield 24 QB CLE none none
-Y! Daily Taysom Hill 25 QB NO none none
-Y! Daily Cam Newton 26 QB NE none none
-Y! Daily Sam Darnold 27 QB NYJ none none
-Y! Daily Mitchell Trubisky 28 QB CHI none none
-Y! Daily Carson Wentz 29 QB PHI none none
-Y! Daily Mike Glennon 30 QB JAC none none
-Y! Daily Robert Griffin 31 QB BAL none none
-Y! Daily Brandon Allen 32 QB CIN none none
-Y! Daily Kendall Hinton 33 QB DEN none none
-Y! Daily Drew Lock 34 QB DEN none none
-Y! Daily Harrison Butker 1 K KC none none
-Y! Daily Justin Tucker 2 K BAL none none
-Y! Daily Greg Zuerlein 3 K DAL none none
-Y! Daily Brandon McManus 4 K DEN none none
-Y! Daily Chris Boswell 5 K PIT none none
-Y! Daily Wil Lutz 6 K NO none none
-Y! Daily Zane Gonzalez 7 K ARI none none
-Y! Daily Jonathan Brown 8 K JAC none none
-Y! Daily Younghoe Koo 9 K ATL none none
-Y! Daily Joey Slye 10 K CAR none none
-Y! Daily Dan Bailey 11 K MIN none none
-Y! Daily Ka'imi Fairbairn 12 K HOU none none
-Y! Daily Nick Folk 13 K NE none none
-Y! Daily Jason Myers 14 K SEA none none
-Y! Daily Jake Elliott 15 K PHI none none
-Y! Daily Matt Prater 16 K DET none none
-Y! Daily Jason Sanders 17 K MIA none none
-Y! Daily Cairo Santos 18 K CHI none none
-Y! Daily Sergio Castillo 19 K NYJ none none
-Y! Daily Robbie Gould 20 K SF none none
-Y! Daily Ryan Succop 21 K TB none none
-Y! Daily Dustin Hopkins 22 K WAS none none
-Y! Daily Randy Bullock 23 K CIN none none
-Y! Daily Graham Gano 24 K NYG none none
-Y! Daily Rodrigo Blankenship 25 K IND none none
-Y! Daily Cody Parkey 26 K CLE none none
-Y! Daily Michael Badgley 27 K LAC none none
-Y! Daily Tyler Bass 28 K BUF none none
-Y! Daily Daniel Carlson 29 K LV none none
-Y! Daily Mason Crosby 30 K GB none none
-Y! Daily Stephen Gostkowski 31 K TEN none none
+Y! Terry McLaurin 1 WR WAS none none
+Y! Justin Jefferson 2 WR MIN none none
+Y! DK Metcalf 3 WR SEA none none
+Y! Keenan Allen 4 WR LAC none none
+Y! Davante Adams 5 WR GB none none
+Y! Will Fuller 6 WR HOU none none
+Y! Ventell Bryant 7 WR DAL none none
+Y! Jason Moore 8 WR LAC none none
+Y! Calvin Ridley 9 WR ATL none none
+Y! D.J. Moore 10 WR CAR none none
+Y! Michael Thomas 11 WR NO none none
+Y! Tyreek Hill 12 WR KC none none
+Y! John Hightower 13 WR PHI none none
+Y! J.J. Arcega-Whiteside 14 WR PHI none none
+Y! Victor Bolden 15 WR DET none none
+Y! Cedrick Wilson 16 WR DAL none none
+Y! Trent Taylor 17 WR SF none none
+Y! Cooper Kupp 18 WR LA none none
+Y! Diontae Johnson 19 WR PIT none none
+Y! Mike Williams 20 WR LAC none none
+Y! Chase Claypool 21 WR PIT none none
+Y! Michael Pittman 22 WR IND none none
+Y! Chris Godwin 23 WR TB none none
+Y! Robert Woods 24 WR LA none none
+Y! Darius Slayton 25 WR NYG none none
+Y! Allen Robinson 26 WR CHI none none
+Y! Brandin Cooks 27 WR HOU none none
+Y! Darrius Shepherd 28 WR GB none none
+Y! Amari Cooper 29 WR DAL none none
+Y! Antonio Brown 30 WR TB none none
+Y! Sterling Shepard 31 WR NYG none none
+Y! Tyler Lockett 32 WR SEA none none
+Y! Mike Evans 33 WR TB none none
+Y! A.J. Brown 34 WR TEN none none
+Y! DeVante Parker 35 WR MIA none none
+Y! Deebo Samuel 36 WR SF none none
+Y! Marvin Jones 37 WR DET none none
+Y! Nelson Agholor 38 WR LV none none
+Y! Cole Beasley 39 WR BUF none none
+Y! Equanimeous St. Brown 40 WR GB none none
+Y! Matt Slater 41 WR NE none none
+Y! Jamison Crowder 42 WR NYJ none none
+Y! Jakobi Meyers 43 WR NE none none
+Y! Robby Anderson 44 WR CAR none none
+Y! Christian Kirk 45 WR ARI none none
+Y! CeeDee Lamb 46 WR DAL none none
+Y! Marvin Hall 47 WR DET none none
+Y! Tee Higgins 48 WR CIN none none
+Y! Jarvis Landry 49 WR CLE none none
+Y! JuJu Smith-Schuster 50 WR PIT none none
+Y! Corey Davis 51 WR TEN none none
+Y! DaeSean Hamilton 52 WR DEN none none
+Y! Isaiah Wright 53 WR WAS none none
+Y! K.J. Hill 54 WR LAC none none
+Y! Keelan Cole 55 WR JAC none none
+Y! Jalen Reagor 56 WR PHI none none
+Y! Tyler Boyd 57 WR CIN none none
+Y! Russell Gage 58 WR ATL none none
+Y! Curtis Samuel 59 WR CAR none none
+Y! Olamide Zaccheaus 60 WR ATL none none
+Y! T.Y. Hilton 61 WR IND none none
+Y! Damiere Byrd 62 WR NE none none
+Y! Josh Reynolds 63 WR LA none none
+Y! Zach Pascal 64 WR IND none none
+Y! Marquez Valdes-Scantling 65 WR GB none none
+Y! Breshad Perriman 66 WR NYJ none none
+Y! Marquise Brown 67 WR BAL none none
+Y! Allen Lazard 68 WR GB none none
+Y! Laviska Shenault 69 WR JAC none none
+Y! Javon Wims 70 WR CHI none none
+Y! Trent Sherfield 71 WR ARI none none
+Y! Richie James 72 WR SF none none
+Y! Golden Tate 73 WR NYG none none
+Y! Emmanuel Sanders 74 WR NO none none
+Y! Gabriel Davis 75 WR BUF none none
+Y! Kendrick Bourne 76 WR SF none none
+Y! Willie Snead 77 WR BAL none none
+Y! Rashard Higgins 78 WR CLE none none
+Y! David Moore 79 WR SEA none none
+Y! Olabisi Johnson 80 WR MIN none none
+Y! Mecole Hardman 81 WR KC none none
+Y! Hunter Renfrow 82 WR LV none none
+Y! Denzel Mims 83 WR NYJ none none
+Y! Jerry Jeudy 84 WR DEN none none
+Y! Jakeem Grant 85 WR MIA none none
+Y! Andy Isabella 86 WR ARI none none
+Y! Tim Patrick 87 WR DEN none none
+Y! Sammy Watkins 88 WR KC none none
+Y! Khadarel Hodge 89 WR CLE none none
+Y! Antonio Callaway 90 WR MIA none none
+Y! Kalif Raymond 91 WR TEN none none
+Y! Keke Coutee 92 WR HOU none none
+Y! Joe Reed 93 WR LAC none none
+Y! Rashard Davis 94 WR TEN none none
+Y! Michael Gallup 95 WR DAL none none
+Y! N'Keal Harry 96 WR NE none none
+Y! Steven Sims 97 WR WAS none none
+Y! Jake Kumerow 98 WR BUF none none
+Y! Van Jefferson 99 WR LA none none
+Y! Darnell Mooney 100 WR CHI none none
+Y! Henry Ruggs 101 WR LV none none
+Y! Devin Duvernay 102 WR BAL none none
+Y! Isaiah McKenzie 103 WR BUF none none
+Y! Pharoh Cooper 104 WR CAR none none
+Y! Mohamed Sanu 105 WR DET none none
+Y! Tre'Quan Smith 106 WR NO none none
+Y! Travis Fulgham 107 WR PHI none none
+Y! Anthony Miller 108 WR CHI none none
+Y! Cam Sims 109 WR WAS none none
+Y! A.J. Green 110 WR CIN none none
+Y! Demarcus Robinson 111 WR KC none none
+Y! Jalen Guyton 112 WR LAC none none
+Y! Collin Johnson 113 WR JAC none none
+Y! Quintez Cephus 114 WR DET none none
+Y! Alshon Jeffery 115 WR PHI none none
+Y! Tajae Sharpe 116 WR MIN none none
+Y! Greg Ward 117 WR PHI none none
+Y! Austin Mack 118 WR NYG none none
+Y! Miles Boykin 119 WR BAL none none
+Y! James Proche 120 WR BAL none none
+Y! Freddie Swain 121 WR SEA none none
+Y! Bryan Edwards 122 WR LV none none
+Y! K.J. Hamler 123 WR DEN none none
+Y! Auden Tate 124 WR CIN none none
+Y! Brandon Zylstra 125 WR CAR none none
+Y! Jeff Smith 126 WR NYJ none none
+Y! Chad Beebe 127 WR MIN none none
+Y! Dez Bryant 128 WR BAL none none
+Y! Cordarrelle Patterson 129 WR CHI none none
+Y! James Washington 130 WR PIT none none
+Y! DeAndre Carter 131 WR HOU none none
+Y! Dontrelle Inman 132 WR WAS none none
+Y! Scott Miller 133 WR TB none none
+Y! Terry Godwin 134 WR JAC none none
+Y! Daurice Fountain 135 WR IND none none
+Y! Christian Blake 136 WR ATL none none
+Y! Gunner Olszewski 137 WR NE none none
+Y! Braxton Berrios 138 WR NYJ none none
+Y! Stefon Diggs 139 WR BUF none none
+Y! DeAndre Hopkins 140 WR ARI none none
+Y! Zay Jones 141 WR LV none none
+Y! Donovan Peoples-Jones 142 WR CLE none none
+Y! Jamal Agnew 143 WR DET none none
+Y! KeeSean Johnson 144 WR ARI none none
+Y! Nick Westbrook-Ikhine 145 WR TEN none none
+Y! Ryan Griffin 1 TE NYJ none none
+Y! Travis Kelce 2 TE KC none none
+Y! Jack Doyle 3 TE IND none none
+Y! Matt LaCosse 4 TE NE none none
+Y! Nick Vannett 5 TE DEN none none
+Y! Darren Waller 6 TE LV none none
+Y! Blake Bell 7 TE DAL none none
+Y! Ricky Seals-Jones 8 TE KC none none
+Y! Jeremy Sprinkle 9 TE WAS none none
+Y! Dallas Goedert 10 TE PHI none none
+Y! T.J. Hockenson 11 TE DET none none
+Y! Mike Gesicki 12 TE MIA none none
+Y! Chris Manhertz 13 TE CAR none none
+Y! Jace Sternberger 14 TE GB none none
+Y! Evan Engram 15 TE NYG none none
+Y! Robert Tonyan 16 TE GB none none
+Y! Rob Gronkowski 17 TE TB none none
+Y! Hayden Hurst 18 TE ATL none none
+Y! Austin Hooper 19 TE CLE none none
+Y! Hunter Henry 20 TE LAC none none
+Y! Jordan Reed 21 TE SF none none
+Y! Dalton Schultz 22 TE DAL none none
+Y! Gerald Everett 23 TE LA none none
+Y! Richard Rodgers 24 TE PHI none none
+Y! Eric Ebron 25 TE PIT none none
+Y! Kyle Rudolph 26 TE MIN none none
+Y! Jordan Akins 27 TE HOU none none
+Y! Jonnu Smith 28 TE TEN none none
+Y! Jason Witten 29 TE LV none none
+Y! Marcedes Lewis 30 TE GB none none
+Y! Josh Hill 31 TE NO none none
+Y! Logan Thomas 32 TE WAS none none
+Y! Dan Arnold 33 TE ARI none none
+Y! Tyler Eifert 34 TE JAC none none
+Y! Mo Alie-Cox 35 TE IND none none
+Y! Dawson Knox 36 TE BUF none none
+Y! Trey Burton 37 TE IND none none
+Y! Will Dissly 38 TE SEA none none
+Y! Noah Fant 39 TE DEN none none
+Y! Jared Cook 40 TE NO none none
+Y! Harrison Bryant 41 TE CLE none none
+Y! Jaeden Graham 42 TE ATL none none
+Y! Darren Fells 43 TE HOU none none
+Y! Ryan Izzo 44 TE NE none none
+Y! Anthony Firkser 45 TE TEN none none
+Y! Cethan Carter 46 TE CIN none none
+Y! Levine Toilolo 47 TE NYG none none
+Y! Jimmy Graham 48 TE CHI none none
+Y! Christopher Herndon 49 TE NYJ none none
+Y! Charles Clay 50 TE ARI none none
+Y! Tyler Higbee 51 TE LA none none
+Y! Jacob Hollister 52 TE SEA none none
+Y! Drew Sample 53 TE CIN none none
+Y! James O'Shaughnessy 54 TE JAC none none
+Y! Ross Dwelley 55 TE SF none none
+Y! Adam Shaheen 56 TE MIA none none
+Y! Xavier Grimble 57 TE BAL none none
+Y! Cole Kmet 58 TE CHI none none
+Y! Vance McDonald 59 TE PIT none none
+Y! Durham Smythe 60 TE MIA none none
+Y! Jesse James 61 TE DET none none
+Y! Jordan Thomas 62 TE NE none none
+Y! Kaden Smith 63 TE NYG none none
+Y! Cameron Brate 64 TE TB none none
+Y! Adam Trautman 65 TE NO none none
+Y! Ian Thomas 66 TE CAR none none
+Y! Foster Moreau 67 TE LV none none
+Y! Demetrius Harris 68 TE CHI none none
+Y! Derrick Henry 1 RB TEN none none
+Y! James Robinson 2 RB JAC none none
+Y! Miles Sanders 3 RB PHI none none
+Y! C.J. Prosise 4 RB HOU none none
+Y! Peyton Barber 5 RB WAS none none
+Y! Alvin Kamara 6 RB NO none none
+Y! Damien Harris 7 RB NE none none
+Y! Ezekiel Elliott 8 RB DAL none none
+Y! Chris Carson 9 RB SEA none none
+Y! Wayne Gallman 10 RB NYG none none
+Y! Brian Hill 11 RB ATL none none
+Y! Aaron Jones 12 RB GB none none
+Y! Josh Jacobs 13 RB LV none none
+Y! Clyde Edwards-Helaire 14 RB KC none none
+Y! Trenton Cannon 15 RB CAR none none
+Y! Antonio Gibson 16 RB WAS none none
+Y! Austin Ekeler 17 RB LAC none none
+Y! Kenyan Drake 18 RB ARI none none
+Y! Frank Gore 19 RB NYJ none none
+Y! Mike Davis 20 RB CAR none none
+Y! Raheem Mostert 21 RB SF none none
+Y! Benny Snell 22 RB PIT none none
+Y! Zack Moss 23 RB BUF none none
+Y! Adrian Peterson 24 RB DET none none
+Y! Nyheim Hines 25 RB IND none none
+Y! Ronald Jones 26 RB TB none none
+Y! Giovani Bernard 27 RB CIN none none
+Y! Patrick Laird 28 RB MIA none none
+Y! Tyler Ervin 29 RB GB none none
+Y! Bo Scarbrough 30 RB SEA none none
+Y! Bo Scarbrough 31 RB SEA none none
+Y! Jordan Wilkins 32 RB IND none none
+Y! Myles Gaskin 33 RB MIA none none
+Y! Darrell Henderson 34 RB LA none none
+Y! David Montgomery 35 RB CHI none none
+Y! Duke Johnson 36 RB HOU none none
+Y! Kerryon Johnson 37 RB DET none none
+Y! Ryan Nall 38 RB CHI none none
+Y! Jordan Howard 39 RB PHI none none
+Y! Trayveon Williams 40 RB CIN none none
+Y! Melvin Gordon 41 RB DEN none none
+Y! Anthony McFarland 42 RB PIT none none
+Y! Leonard Fournette 43 RB TB none none
+Y! Justice Hill 44 RB BAL none none
+Y! Cam Akers 45 RB LA none none
+Y! Phillip Lindsay 46 RB DEN none none
+Y! Jeremy McNichols 47 RB TEN none none
+Y! Troymaine Pope 48 RB LAC none none
+Y! Kareem Hunt 49 RB CLE none none
+Y! Devontae Booker 50 RB LV none none
+Y! Samaje Perine 51 RB CIN none none
+Y! J.D. McKissic 52 RB WAS none none
+Y! Tony Pollard 53 RB DAL none none
+Y! Chase Edmonds 54 RB ARI none none
+Y! Sony Michel 55 RB NE none none
+Y! Darrel Williams 56 RB KC none none
+Y! DeeJay Dallas 57 RB SEA none none
+Y! Malcolm Brown 58 RB LA none none
+Y! Jamaal Williams 59 RB GB none none
+Y! Le'Veon Bell 60 RB KC none none
+Y! Carlos Hyde 61 RB SEA none none
+Y! Latavius Murray 62 RB NO none none
+Y! Boston Scott 63 RB PHI none none
+Y! Ito Smith 64 RB ATL none none
+Y! Matt Breida 65 RB MIA none none
+Y! Alexander Mattison 66 RB MIN none none
+Y! Devin Singletary 67 RB BUF none none
+Y! Alfred Morris 68 RB NYG none none
+Y! Devine Ozigbo 69 RB JAC none none
+Y! Josh Adams 70 RB NYJ none none
+Y! D'Ernest Johnson 71 RB CLE none none
+Y! Ke'Shawn Vaughn 72 RB TB none none
+Y! Royce Freeman 73 RB DEN none none
+Y! Jeffery Wilson 74 RB SF none none
+Y! Jerick McKinnon 75 RB SF none none
+Y! Lamar Miller 76 RB CHI none none
+Y! James White 77 RB NE none none
+Y! Joshua Kelley 78 RB LAC none none
+Y! DeAndre Washington 79 RB MIA none none
+Y! Gus Edwards 80 RB BAL none none
+Y! Dalvin Cook 81 RB MIN none none
+Y! Nick Chubb 82 RB CLE none none
+Y! D'Onta Foreman 83 RB TEN none none
+Y! Dion Lewis 84 RB NYG none none
+Y! LeSean McCoy 85 RB TB none none
+Y! Ameer Abdullah 86 RB MIN none none
+Y! Scottie Phillips 87 RB HOU none none
+Y! Corey Clement 88 RB PHI none none
+Y! Jalen Hurts 1 QB PHI none none
+Y! Josh Allen 2 QB BUF none none
+Y! Jared Goff 3 QB LA none none
+Y! Patrick Mahomes 4 QB KC none none
+Y! Tom Brady 5 QB TB none none
+Y! Justin Herbert 6 QB LAC none none
+Y! Russell Wilson 7 QB SEA none none
+Y! Matt Ryan 8 QB ATL none none
+Y! Philip Rivers 9 QB IND none none
+Y! Deshaun Watson 10 QB HOU none none
+Y! Aaron Rodgers 11 QB GB none none
+Y! Ben Roethlisberger 12 QB PIT none none
+Y! Matthew Stafford 13 QB DET none none
+Y! Kyler Murray 14 QB ARI none none
+Y! Daniel Jones 15 QB NYG none none
+Y! Derek Carr 16 QB LV none none
+Y! Teddy Bridgewater 17 QB CAR none none
+Y! Alex Smith 18 QB WAS none none
+Y! Ryan Tannehill 19 QB TEN none none
+Y! Kirk Cousins 20 QB MIN none none
+Y! Ryan Fitzpatrick 21 QB MIA none none
+Y! Nick Mullens 22 QB SF none none
+Y! Andy Dalton 23 QB DAL none none
+Y! Baker Mayfield 24 QB CLE none none
+Y! Taysom Hill 25 QB NO none none
+Y! Cam Newton 26 QB NE none none
+Y! Sam Darnold 27 QB NYJ none none
+Y! Mitchell Trubisky 28 QB CHI none none
+Y! Carson Wentz 29 QB PHI none none
+Y! Mike Glennon 30 QB JAC none none
+Y! Robert Griffin 31 QB BAL none none
+Y! Brandon Allen 32 QB CIN none none
+Y! Kendall Hinton 33 QB DEN none none
+Y! Drew Lock 34 QB DEN none none
+Y! Harrison Butker 1 K KC none none
+Y! Justin Tucker 2 K BAL none none
+Y! Greg Zuerlein 3 K DAL none none
+Y! Brandon McManus 4 K DEN none none
+Y! Chris Boswell 5 K PIT none none
+Y! Wil Lutz 6 K NO none none
+Y! Zane Gonzalez 7 K ARI none none
+Y! Jonathan Brown 8 K JAC none none
+Y! Younghoe Koo 9 K ATL none none
+Y! Joey Slye 10 K CAR none none
+Y! Dan Bailey 11 K MIN none none
+Y! Ka'imi Fairbairn 12 K HOU none none
+Y! Nick Folk 13 K NE none none
+Y! Jason Myers 14 K SEA none none
+Y! Jake Elliott 15 K PHI none none
+Y! Matt Prater 16 K DET none none
+Y! Jason Sanders 17 K MIA none none
+Y! Cairo Santos 18 K CHI none none
+Y! Sergio Castillo 19 K NYJ none none
+Y! Robbie Gould 20 K SF none none
+Y! Ryan Succop 21 K TB none none
+Y! Dustin Hopkins 22 K WAS none none
+Y! Randy Bullock 23 K CIN none none
+Y! Graham Gano 24 K NYG none none
+Y! Rodrigo Blankenship 25 K IND none none
+Y! Cody Parkey 26 K CLE none none
+Y! Michael Badgley 27 K LAC none none
+Y! Tyler Bass 28 K BUF none none
+Y! Daniel Carlson 29 K LV none none
+Y! Mason Crosby 30 K GB none none
+Y! Stephen Gostkowski 31 K TEN none none

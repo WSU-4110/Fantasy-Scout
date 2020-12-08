@@ -6,7 +6,7 @@ require 'init.php';
 
 
 // Week# is passed into script
-$weekNum = 1;
+$weekNum = 12;
 // From Week#, get WeekID
 $getWeek = "
     SELECT *
