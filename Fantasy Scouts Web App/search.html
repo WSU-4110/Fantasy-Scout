@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (isset($_SESSION['acctID'])) {
+        $acctID = $_SESSION['acctID'];
+    }else{
+        $acctID = 0;
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
