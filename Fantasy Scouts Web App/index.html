@@ -1,3 +1,7 @@
+<?php
+session_start();
+$acctID = $_SESSION['acctID'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,16 +49,16 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "Select name, ratingN FROM Organizations WHERE orgID in (SELECT orgID from Bookmarks WHERE acctid = '1')";
+$sql = "Select name, ratingN, ratingC FROM Organizations WHERE orgID in (SELECT orgID from Bookmarks WHERE acctid = '$acctID')";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
-    echo "" . $row["name"]. ": " . $row["ratingN"]. "<br><br>";
+    echo "" . $row["name"]. ": " . $row["ratingN"]. "  " . $row["ratingC"]."<br><br>";
   }
 } else {
-  echo "0 results";
+  echo "No Bookmarks";
 }
 
 mysqli_close($conn);
@@ -94,7 +98,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT name FROM Organizations WHERE ratingN = (Select MAX(ratingN) FROM Organizations)";
+$sql = "SELECT name FROM Organizations WHERE ratingN = (Select MIN(ratingN) FROM Organizations)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -103,7 +107,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "" . $row["name"]."<br>";
   }
 } else {
-  echo "0 results";
+  echo "Please look back in a few moments";
 }
 mysqli_close($conn);
 ?></li>
@@ -123,7 +127,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT name FROM Organizations WHERE ratingN = (Select MIN(ratingN) FROM Organizations)";
+$sql = "SELECT name FROM Organizations WHERE ratingN = (Select MAX(ratingN) FROM Organizations)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -132,7 +136,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "" . $row["name"]."<br>";
   }
 } else {
-  echo "0 results";
+  echo "Please look back in a few moments";
 }
 mysqli_close($conn);
 ?></li>
@@ -155,7 +159,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT username FROM Accounts WHERE acctID = '1'";
+$sql = "SELECT username FROM Accounts WHERE acctID = '$acctID'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -164,7 +168,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "" . $row["username"]."<br>";
   }
 } else {
-  echo "0 results";
+  echo "<a href=login.html>Please Login or Signup</a>";
 }
 mysqli_close($conn);
 ?></li>
@@ -181,7 +185,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT email FROM Accounts WHERE acctID = '1'";
+$sql = "SELECT email FROM Accounts WHERE acctID = '$acctID'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -190,7 +194,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "" . $row["email"]."<br>";
   }
 } else {
-  echo "0 results";
+  echo "<a href=login.html>Please Login or Signup</a>";
 }
 mysqli_close($conn);
 ?></li>

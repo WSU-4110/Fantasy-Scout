@@ -1,3 +1,7 @@
+<?php
+session_start();
+$acctID = $_SESSION['acctID'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +45,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MAX(ratingN) FROM Organizations)";
+$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MIN(ratingN) FROM Organizations)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -69,7 +73,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MIN(ratingN) FROM Organizations)";
+$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MAX(ratingN) FROM Organizations)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -99,7 +103,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MAX(ratingN) FROM Organizations)";
+$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MIN(ratingN) FROM Organizations)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -127,7 +131,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MIN(ratingN) FROM Organizations)";
+$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MAX(ratingN) FROM Organizations)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -157,7 +161,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MAX(ratingN) FROM Organizations)";
+$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MIN(ratingN) FROM Organizations)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -185,7 +189,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MIN(ratingN) FROM Organizations)";
+$sql = "SELECT name, ratingN, ratingC FROM Organizations WHERE ratingN = (Select MAX(ratingN) FROM Organizations)";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {

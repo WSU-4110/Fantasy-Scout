@@ -1,3 +1,7 @@
+<?php
+session_start();
+$acctID = $_SESSION['acctID'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,7 +45,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT username FROM Accounts WHERE acctID = '1'";
+$sql = "SELECT username FROM Accounts WHERE acctID = '$acctID'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
@@ -50,7 +54,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "" . $row["username"]."<br>";
   }
 } else {
-  echo "0 results";
+  echo "<a href=login.html>Please Login or Signup</a>";
 }
 mysqli_close($conn);
 ?></p>
@@ -69,22 +73,51 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT email FROM Accounts WHERE acctID = '1'";
+$sql = "SELECT bio FROM Accounts WHERE acctID = '$acctID'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
   while($row = mysqli_fetch_assoc($result)) {
-    echo "" . $row["email"]."<br>";
+    echo "" . $row["bio"]."<br>";
   }
 } else {
-  echo "0 results";
+  echo " ";
 }
 mysqli_close($conn);
 ?></p>
-<form action="editProfile.html">
-    <input type="submit" value="Edit Profile" />
-</form>
+
+<?php
+$servername = "localhost";
+$username = "id15544002_fsmod";
+$password = "Fantasyscout4110!";
+$dbname = "id15544002_fsdb";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "SELECT username FROM Accounts WHERE acctID = '$acctID'";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    echo "<form action=editProfile.htm>
+            <input type='submit' value='Edit Profile' />
+        </form>
+        <form action=login.html>
+            <input type='submit' value='logout' />
+        </form>";  
+} else {
+  echo "<a href=login.html>Please Login or Signup</a>";
+}
+
+mysqli_close($conn);
+?>
+
+
 <h2>Your Settings</h2>
 
 <!-- Dark Mode -->

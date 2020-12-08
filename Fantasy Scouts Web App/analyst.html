@@ -1,3 +1,7 @@
+<?php
+session_start();
+$acctID = $_SESSION['acctID'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,8 +68,6 @@ if (mysqli_num_rows($result) > 0) {
       echo "</tr>";
       $x++;
   }
-
-
 
 } else {
   echo "Failure to load";

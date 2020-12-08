@@ -1,5 +1,6 @@
-<<?php
-
+<?php
+//Start Session
+session_start();
 // Database onnection script
 require 'init.php';
 
@@ -30,11 +31,18 @@ $reg = "
 
 // ***REGISTER USER***
 if (mysqli_query($con, $reg)) {
-  // New user account successfully registered
-  echo "New account with login credentials successfully created<br>Email: $email<br>Username: $username<br>Password: $password<br>Welcome!<br><br>";
+      $logincheck = "
+      SELECT acctID
+      FROM Accounts
+      WHERE username = '$username' AND password = '$password' OR email = '$username' AND password = '$password';
+    ";
+    $res = mysqli_query($con, $logincheck);
+    $row = mysqli_fetch_assoc($res);
+    $_SESSION['acctID'] = $row['acctID'];
+  header("Location: https://fantasyscout.000webhostapp.com/Fantasy-Scout/Fantasy%20Scouts%20Web%20App/index.html");
 } else {
   // New user account creation failed
-  echo "ERROR! " . mysqli_error($con);
+  header("Location: https://fantasyscout.000webhostapp.com/Fantasy-Scout/Fantasy%20Scouts%20Web%20App/login.html");
 }
 
 

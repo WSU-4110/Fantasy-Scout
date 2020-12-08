@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['acctID'] = 0;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +23,7 @@
 </div>
 <main>
 <h3>Login</h3>
-<p>Login in to your Fantasy Scouts account<br>Don't have an account? <a href="https://fantasyscoutserver.000webhostapp.com/Fantasy-Scout/Fantasy-Scout-master/Fantasy%20Scouts%20Web%20App/register.html">Register here</a></p>
+<p>Login in to your Fantasy Scouts account<br>Don't have an account? <a href="register.html">Register here</a></p>
 <form method="post" action="../php/public_html/login.php">
 <label for="myUname">Username<br>or Email:</label><input type="text" name="myUname" id="myUname" required="required"><br><br>
 <label for="myPword">Password:</label><input type="password" name="myPword" id="myPword" required="required"><br>

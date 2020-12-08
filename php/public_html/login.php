@@ -1,4 +1,6 @@
-<<?php
+<?php
+// Start the session
+session_start();
 
 // Database onnection script
 require 'init.php';
@@ -6,7 +8,6 @@ require 'init.php';
 // User login variables
 $username = $_POST["myUname"];
 $password = $_POST["myPword"];
-
 
 
 // ***DEFINE QUERY STRINGS***
@@ -18,16 +19,17 @@ $logincheck = "
 ";
 $login = mysqli_num_rows(mysqli_query($con, $logincheck));
 
-
-
 // ***LOGIN USER***
 if ($login) {
 // Login found record with idential username or email AND identical password
 // Login Successful
-echo "Account $username successfully logged in.<br><br>";
+    $res = mysqli_query($con, $logincheck);
+    $row = mysqli_fetch_assoc($res);
+    $_SESSION['acctID'] = $row['acctID'];
+    header("Location: https://fantasyscout.000webhostapp.com/Fantasy-Scout/Fantasy%20Scouts%20Web%20App/index.html");
 } else {
   // ERROR! New user could not be created
-  echo "User with those login credentials<br>Username: $username<br>Password: $password<br>could not be found. Please try again.<br><br>" . mysqli_error($con);
+  header("Location: https://fantasyscout.000webhostapp.com/Fantasy-Scout/Fantasy%20Scouts%20Web%20App/register.html");
 }
 
 

@@ -1,4 +1,6 @@
-<<?php
+<?php
+// Start the session
+session_start();
 
 // Database onnection script
 require 'init.php';
@@ -6,7 +8,7 @@ require 'init.php';
 
 
 // User login variables
-//$acctID = $_POST["acctID"];
+$acctID = $_SESSION['acctID'];
 $orgID = $_POST["x"];
 
 
@@ -17,29 +19,25 @@ INSERT INTO Accounts (username, password, email, fname, lname, phone, regDate)
 VALUES ('$username', '$password', '$email', '$fname', '$lname', '$phone', CURRENT_DATE());
 */
 
-$reg = "SELECT * FROM Bookmarks WHERE acctID = 1 AND orgID = '$orgID'";
-
-
+$reg = "SELECT * FROM Bookmarks WHERE acctID = '$acctID' AND orgID = '$orgID'";
 
 
 // ***UPDATE Bookmark***
 if (mysqli_num_rows(mysqli_query($con, $reg)) != 0) { //toggled for deletion
-    $reg = "DELETE FROM Bookmarks WHERE acctID = 1 AND orgID = '$orgID'";
+    $reg = "DELETE FROM Bookmarks WHERE acctID = '$acctID' AND orgID = '$orgID'";
       if (mysqli_query($con, $reg)){
-          echo "succesful deletion";
+          header("Location: https://fantasyscout.000webhostapp.com/Fantasy-Scout/Fantasy%20Scouts%20Web%20App/index.html");
       }else{
-          echo "failure to complete deletion";
+          header("Location: https://fantasyscout.000webhostapp.com/Fantasy-Scout/Fantasy%20Scouts%20Web%20App/analyst.html");
       }
 } else { //toggled for addition
-    $reg = "INSERT INTO Bookmarks (acctID, orgID) VALUES (1, '$orgID')";
+    $reg = "INSERT INTO Bookmarks (acctID, orgID) VALUES ('$acctID', '$orgID')";
       if (mysqli_query($con, $reg)){
-          echo "succesful addition";
+          header("Location: https://fantasyscout.000webhostapp.com/Fantasy-Scout/Fantasy%20Scouts%20Web%20App/index.html");
       }else{
-          echo "failure to complete addition";
+          header("Location: https://fantasyscout.000webhostapp.com/Fantasy-Scout/Fantasy%20Scouts%20Web%20App/analyst.html");
       }
 }
-
-
 
 // Close connection to Database
 mysqli_close($con);
