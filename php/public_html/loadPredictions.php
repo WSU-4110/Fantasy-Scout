@@ -8,9 +8,10 @@ require 'init.php';
 // Formatted .txt files to be loaded into database.
 // First line contains table name, second line contains the PHP insert string
 $files = array(
-  "txt/week12predictions/cbs.txt",
+  "txt/week12predictions/bb10.txt",
   "txt/week12predictions/draftKings.txt",
   "txt/week12predictions/espn.txt",
+  "txt/week12predictions/fanTrax.txt",
   "txt/week12predictions/yDaily.txt"
 );
 

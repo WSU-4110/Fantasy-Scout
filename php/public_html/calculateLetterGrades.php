@@ -38,7 +38,7 @@ function gradeLetter($score,$id,$idType) {
             }
         }
         // GRADE B
-        if ($score >= $Bceil AND $score < $Bceil ) {
+        if ($score >= $Bceil AND $score < $Cceil ) {
             // B+
             if ($score >= $Bceil AND $score < $B) {
                 $letterGrade = "B+";
@@ -53,7 +53,7 @@ function gradeLetter($score,$id,$idType) {
             }
         }
         // GRADE C
-        if ($score >= $Cceil AND $score < $Cceil ) {
+        if ($score >= $Cceil AND $score < $Dceil ) {
             // C+
             if ($score >= $Cceil AND $score < $C) {
                 $letterGrade = "C+";
@@ -68,7 +68,7 @@ function gradeLetter($score,$id,$idType) {
             }
         }
         // GRADE D
-        if ($score >= $Dceil AND $score < $Dceil ) {
+        if ($score >= $Dceil AND $score < $Eceil ) {
             // D+
             if ($score >= $Dceil AND $score < $D) {
                 $letterGrade = "D+";
@@ -83,7 +83,7 @@ function gradeLetter($score,$id,$idType) {
             }
         }
         // GRADE E
-        if ($score >= $Eceil AND $score < $Eceil ) {
+        if ($score >= $Eceil AND $score <= $Eminus ) {
             // E+
             if ($score >= $Eceil AND $score < $E) {
                 $letterGrade = "E+";

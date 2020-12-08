@@ -120,7 +120,7 @@ function scaleGrades($nextbestScore, $nextworstScore) {
             Bceil = '$Bceil', B = '$B', Bminus = '$Bminus',
             Cceil = '$Cceil', C = '$C', Cminus = '$Cminus',
             Dceil = '$Dceil', D = '$D', Dminus = '$Dminus',
-            Eceil = '$Eceil', E = '$E', Eminus = '$Eminus'
+            Eceil = '$Eceil', E = '$E', Eminus = '$nextworstScore'
         WHERE globalID > 0;
     ";
     if (mysqli_query($con,$updateScale)) {
@@ -135,6 +135,8 @@ function scaleGrades($nextbestScore, $nextworstScore) {
 
 $bestOrg = getBest("Organizations");
 $worstOrg = getWorst("Organizations");
+echo "Best organization id: ".$bestOrg["orgID"]."<br>";
+echo "Worst organization id: ".$worstOrg["orgID"]."<br>";
 setBest($bestOrg,"orgID");
 setWorst($worstOrg,"orgID");
 
@@ -143,6 +145,8 @@ setWorst($worstOrg,"orgID");
 
 $nextbest = getNextBest("Organizations");
 $nextworst = getNextWorst("Organizations");
+echo "Next best organization id: ".$nextbest["orgID"]."<br>";
+echo "Next worst organization id: ".$nextworst["orgID"]."<br>";
 
 scaleGrades($nextbest["ratingN"], $nextworst["ratingN"]);
 

@@ -2,5 +2,6 @@ Organizations
 name,website
 'ESPN','https://www.espn.com/fantasy/football/'
 'DraftKings','https://www.draftkings.com'
-'CBS','https://www.cbssports.com'
 'Y!','https://sports.yahoo.com/'
+'bb10','https://bestball10s.shgn.com/'
+'fanTrax','https://www.fantrax.com/newui/NFL/teams.go'
