@@ -29,6 +29,6 @@ teamID,teamName,city,wins,losses,ties,confr,divsn
 'HOU','Texans','Houston','1','6','0','AFC','South'
 'JAX','Jaguars','Jacksonville','1','6','0','AFC','South'
 'KC','Chiefs','Kansas City','6','1','0','AFC','West'
-'OAK','Raiders','Las Vegas','3','3','0','AFC','West'
-'SD','Chargers','Las Angeles','2','4','0','AFC','West'
+'LV','Raiders','Las Vegas','3','3','0','AFC','West'
+'LAC','Chargers','Las Angeles','2','4','0','AFC','West'
 'DEN','Broncos','Denver','2','4','0','AFC','West'
