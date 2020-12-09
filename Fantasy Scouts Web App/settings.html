@@ -108,7 +108,7 @@ $sql = "SELECT username FROM Accounts WHERE acctID = '$acctID'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {
-    echo "<form action=editProfile.htm>
+    echo "<form action=editProfile.html>
             <input type='submit' value='Edit Profile' />
         </form>
         <form action=login.html>
