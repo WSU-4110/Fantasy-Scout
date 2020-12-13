@@ -1,3 +1,15 @@
 install:
 - bundle install --path vendor/bundle
 - npm install
+
+{
+  "language": "Maven",
+  "os": [
+    "windows"
+  ],
+  "dist": "xenial",
+  "install": [
+    "bundle install --path vendor/bundle",
+    "npm install"
+  ]
+}
