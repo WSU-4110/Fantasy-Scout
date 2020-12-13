@@ -1,3 +1,3 @@
-language: javascript: 
-ant mainjdk:  
-- oraclejdk8
+install:
+- bundle install --path vendor/bundle
+- npm install
