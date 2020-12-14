@@ -6,4 +6,3 @@ jdk:
 script:
  - java UnitTests/FanMain.java
  - mvn test
- - -mvn Dtest=UnitTests/FanDataTest.java test
