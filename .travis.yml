@@ -1,0 +1,8 @@
+language: java
+
+jdk:
+ - openjdk15
+
+script:
+ - java FanMain.java
+ - mvn test
