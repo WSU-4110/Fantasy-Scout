@@ -4,5 +4,5 @@ jdk:
  - openjdk15
 
 script:
- - java FanMain.java
+ - java UnitTests/FanMain.java
  - mvn test
