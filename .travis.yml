@@ -5,4 +5,5 @@ jdk:
 
 script:
  - java UnitTests/FanMain.java
+ - java UnitTest/FanDataTest.java
  - mvn test
