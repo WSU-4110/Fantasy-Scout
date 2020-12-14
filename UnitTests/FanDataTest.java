@@ -23,7 +23,7 @@ class FanDataTest {
 	@Test
 	public void testResetScore() {
 		FanData fd = new FanData();
-		assertEquals(0 , fd.resetScore());
+		assertEquals(5 , fd.resetScore());
 		assertNotEquals(0.1 , fd.resetScore()); 
 	}
 	
