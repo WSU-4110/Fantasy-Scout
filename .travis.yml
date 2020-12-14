@@ -1,9 +1,0 @@
-language: java 
-mono: none 
-dist: xenial 
-dotnet: 3.1 
-install: 
-- dotnet restore 
-script: 
-- dotnet build 
-- dotnet test 
