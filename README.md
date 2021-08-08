@@ -8,7 +8,7 @@
 * The site has user friendly features including profile customization, analysts page, trending page (who is doing the best/worst), and following an analyst on top of a sleek UI.
 
 ## Contributors
-* Project Manager: Kevin Kluka (kevinWayneState)
-* Data Collection: Grant Jones (GrantJonesWSU)
-* Backend Manager: Josh Perkey (Joshperkey)
-* Frontend Manager: Harvey Tully (fr4800)
+* Project Lead: Kevin Kluka (kevinWayneState)
+* Data Collection Lead: Grant Jones (GrantJonesWSU)
+* Backend Lead: Josh Perkey (Joshperkey)
+* Frontend Lead: Harvey Tully (fr4800)
